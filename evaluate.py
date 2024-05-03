@@ -45,12 +45,9 @@ def evaluate(model, data_raw, id_to_label, args, mode='dev'):
         batch = [b.to(device) if not isinstance(b, int) else b for b in batch]
         input_ids, segment_ids, input_mask, slot_ids, slot_ids_ori, intent_id = batch
         with torch.no_grad():
-            # intent_output, slot_output = model(input_ids, segment_ids, input_mask, prompt_idx)
             intent_logits, slot_logits = model(input_ids, segment_ids, input_mask)
         # intent_evaluate
         intent_logits = torch.sigmoid(intent_logits)
-        # threshold = (torch.max(intent_logits) + torch.min(intent_logits)) / 2
-        # print("Current threshold:", str(args.multi_intent_threshold))
         intent_output = [idx for idx, score in enumerate(intent_logits) if score > args.multi_intent_threshold]
         intent_label = [idx for idx, res in enumerate(intent_id) if res == 1]
 
@@ -80,33 +77,6 @@ def evaluate(model, data_raw, id_to_label, args, mode='dev'):
             joint_all += 1
             p_text = reconstruct_slot_bound(p, l, slot_label_list_simple) # predicted slots
             l_text = align_predictions(l_ori, l_ori, slot_label_list)
-
-            if step == len(test_dataloader) - 1:
-                index = []
-                for i, x in enumerate(l_ori):
-                    if x != -100:
-                        index.append(i)
-                tmp_avg = torch.squeeze(tmp_avg, dim=0)
-                tmp_avg = torch.index_select(tmp_avg, dim=0, index=torch.tensor(index).cuda())
-                tmp_avg = tmp_avg.cpu().numpy()
-                np.savetxt('avg_tensor.txt', tmp_avg, fmt='%.8f', delimiter='\t')
-
-                print(p_text)
-                print('================')
-                print(l_text)
-
-                tensor1 = torch.index_select(slot_logits, dim=0, index=torch.tensor([0]).cuda())
-                tensor1 = torch.squeeze(tensor1, dim=0)
-                tensor1 = torch.index_select(tensor1, dim=0, index=torch.tensor(index).cuda())
-                tensor1 = tensor1.cpu().numpy()
-                np.savetxt('tensor1.txt', tensor1, fmt='%.8f', delimiter='\t')
-
-                tensor2 = torch.index_select(slot_logits, dim=0, index=torch.tensor([1]).cuda())
-                tensor2 = torch.squeeze(tensor2, dim=0)
-                tensor2 = torch.index_select(tensor2, dim=0, index=torch.tensor(index).cuda())
-                tensor2 = tensor2.cpu().numpy()
-                np.savetxt('tensor2.txt', tensor2, fmt='%.8f', delimiter='\t')
-
             if p_text == l_text and set(intent_output) == set(intent_label):
                 joint_correct += 1
             s_preds.append(p_text)
