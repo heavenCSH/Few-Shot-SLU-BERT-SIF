@@ -22,30 +22,12 @@ class Model(BertPreTrainedModel):
 
     def forward(self, input_ids, token_type_ids, attention_mask):
         bert_outputs = self.bert(input_ids=input_ids, token_type_ids=token_type_ids, attention_mask=attention_mask)
-        # print('sequence_output_shape:', bert_outputs[0].shape) # 32 × 80 × 768
-        # print('cls_output_shape:', bert_outputs[1].shape) # 32 × 768
         sequence_output, pooled_output = bert_outputs[:2] # bert输出
         sequence_output = self.dropout(sequence_output)
         pooled_output = self.dropout(pooled_output)
         prediction_scores, seq_relationship_score = self.cls(sequence_output, pooled_output) # FFN后
         slot_logits = self.slot_classifier(prediction_scores) # bs × man_len × num_slot
-        # print('after--sequence_output_shape:', prediction_scores.shape) # 32 × max_len × vocab_size
-        # print('after--cls_output_shape:', seq_relationship_score.shape) # 32 × 2
         seq_relationship_score = seq_relationship_score[:,0] # 32
-        # seq_relationship_score = torch.softmax(seq_relationship_score,dim=-1)[:,0]
-        # print(seq_relationship_score)
-        # import sys
-        # sys.exit()
-        # guide_intent = (torch.sigmoid(seq_relationship_score) > threshold).float()
-        # guide_intent = guide_intent.view(1, -1)
-        # slot_logits = torch.tensor([])
-        # for i in range(self.num_slot):
-        #     result = torch.matmul(guide_intent, prediction_scores[ : , : , i]).view(-1, 1)
-        #     if len(slot_logits) == 0:
-        #         slot_logits = result
-        #     else:
-        #         slot_logits = torch.cat((slot_logits, result), dim=1)
-        # print(slot_logits)
         return seq_relationship_score, slot_logits
         # return intent_logits, slot_logits
 
