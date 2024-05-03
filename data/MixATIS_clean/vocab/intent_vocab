@@ -1,0 +1,18 @@
+atis_flight=-=He is asking for the flights information from one place to another place
+atis_ground_fare=-=He is asking how much the taxi is
+atis_flight_time=-=He is asking when the plane will leave
+atis_quantity=-=He is asking for the quantity
+atis_distance=-=He is asking for the distance
+atis_city=-=He is asking for the city information
+atis_capacity=-=He is asking for the capacity
+atis_aircraft=-=He is asking for the code of aircrafti
+atis_flight_no=-=He is asking for the flight number
+atis_cheapest=-=He is asking for the cheapest choice
+atis_airline=-=He is asking for the airlines information
+atis_abbreviation=-=He is asking for the meaning of code
+atis_restriction=-=He is asking for the restriction
+atis_airport=-=He is asking for the airport information
+atis_meal=-=He is asking for the served meals
+atis_airfare=-=He is asking for the fare
+atis_ground_service=-=He is asking for the ground service
+atis_day_name=-=He is asking for the day of week

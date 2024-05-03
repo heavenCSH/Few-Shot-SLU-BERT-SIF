@@ -1,0 +1,70 @@
+AddToPlaylist#SearchScreeningEvent O B-artist I-artist O B-playlist I-playlist I-playlist O O O B-object_type O B-movie_name I-movie_name
+AddToPlaylist#RateBook#SearchCreativeWork O O O O B-artist O B-playlist_owner B-playlist I-playlist I-playlist O O O O B-object_type B-object_name I-object_name I-object_name I-object_name B-rating_value O O B-best_rating B-rating_unit O O O O B-object_type B-object_name I-object_name I-object_name I-object_name I-object_name
+AddToPlaylist#PlayMusic O B-entity_name I-entity_name I-entity_name I-entity_name I-entity_name O O B-playlist I-playlist O O O O O B-sort B-music_item O B-artist I-artist O B-service
+AddToPlaylist#SearchCreativeWork O O B-music_item O O B-playlist I-playlist O O O O O O O O B-object_type I-object_type B-object_name I-object_name
+AddToPlaylist O B-entity_name I-entity_name I-entity_name I-entity_name O B-playlist_owner B-playlist I-playlist I-playlist O
+AddToPlaylist#BookRestaurant O O B-music_item O B-playlist_owner O B-playlist I-playlist O O O O O O B-restaurant_type I-restaurant_type O B-party_size_number O
+AddToPlaylist#PlayMusic O B-entity_name I-entity_name I-entity_name I-entity_name O B-playlist_owner I-playlist_owner B-playlist I-playlist I-playlist I-playlist I-playlist O O O O O O O B-music_item O B-artist I-artist O O O B-year
+AddToPlaylist#SearchCreativeWork O B-music_item O B-playlist I-playlist I-playlist O O O O O O O O B-object_name I-object_name I-object_name I-object_name I-object_name I-object_name I-object_name I-object_name I-object_name
+PlayMusic#RateBook O B-artist I-artist O B-object_name I-object_name O B-rating_value B-rating_unit
+PlayMusic#SearchCreativeWork O O B-sort B-music_item O B-artist O O O O O O O B-object_name I-object_name I-object_name I-object_name I-object_name B-object_type I-object_type
+AddToPlaylist#PlayMusic O B-entity_name I-entity_name I-entity_name I-entity_name I-entity_name O O B-playlist I-playlist O O O O O B-sort B-music_item O B-artist I-artist O B-service
+BookRestaurant#PlayMusic O O O B-party_size_number O O O B-sort B-cuisine B-restaurant_type B-spatial_relation B-poi I-poi I-poi O O O O B-service I-service
+GetWeather#PlayMusic O O O O O O B-city O O O B-service O B-playlist
+PlayMusic#RateBook O B-track I-track O O O B-object_select B-object_type B-rating_value O O B-best_rating
+AddToPlaylist#PlayMusic O B-entity_name I-entity_name I-entity_name I-entity_name O B-playlist_owner I-playlist_owner B-playlist I-playlist I-playlist I-playlist I-playlist O O O O O O O B-music_item O B-artist I-artist O O O B-year
+AddToPlaylist#PlayMusic#SearchScreeningEvent O O B-music_item O B-playlist I-playlist O O O O O O B-sort I-sort B-artist I-artist O O O O B-object_type I-object_type B-timeRange
+PlayMusic O O B-playlist O O O
+PlayMusic#SearchCreativeWork O O B-music_item O B-artist O B-service O O O O O B-object_type B-object_name I-object_name I-object_name I-object_name I-object_name
+BookRestaurant#SearchScreeningEvent O O B-party_size_description I-party_size_description I-party_size_description I-party_size_description O O B-city B-restaurant_type O O O O O O O B-movie_name I-movie_name I-movie_name
+BookRestaurant#GetWeather O O B-restaurant_type O B-party_size_number O B-city I-city O O O O O B-condition_temperature O B-timeRange I-timeRange I-timeRange O B-city B-country
+BookRestaurant O O O O O O B-restaurant_type O O O B-served_dish I-served_dish I-served_dish
+BookRestaurant#SearchCreativeWork O O O O B-party_size_number O O B-restaurant_name I-restaurant_name I-restaurant_name I-restaurant_name O B-city O O O O B-object_name I-object_name I-object_name I-object_name
+BookRestaurant#PlayMusic O O O B-party_size_number O O O B-sort B-cuisine B-restaurant_type B-spatial_relation B-poi I-poi I-poi O O O O B-service I-service
+PlayMusic#SearchCreativeWork O O B-sort B-music_item O B-artist O O O O O O O B-object_name I-object_name I-object_name I-object_name I-object_name B-object_type I-object_type
+SearchCreativeWork O O B-object_type O B-object_name I-object_name I-object_name
+AddToPlaylist#RateBook#SearchCreativeWork O O O O B-artist O B-playlist_owner B-playlist I-playlist I-playlist O O O O B-object_type B-object_name I-object_name I-object_name I-object_name B-rating_value O O B-best_rating B-rating_unit O O O O B-object_type B-object_name I-object_name I-object_name I-object_name I-object_name
+BookRestaurant#SearchCreativeWork O O O O B-party_size_number O O B-restaurant_name I-restaurant_name I-restaurant_name I-restaurant_name O B-city O O O O B-object_name I-object_name I-object_name I-object_name
+AddToPlaylist#SearchCreativeWork O O B-music_item O O B-playlist I-playlist O O O O O O O O B-object_type I-object_type B-object_name I-object_name
+AddToPlaylist#SearchCreativeWork O B-music_item O B-playlist I-playlist I-playlist O O O O O O O O B-object_name I-object_name I-object_name I-object_name I-object_name I-object_name I-object_name I-object_name I-object_name
+SearchCreativeWork O O O O O O B-object_name
+GetWeather#SearchCreativeWork O O O O B-spatial_relation I-spatial_relation O B-geographic_poi I-geographic_poi I-geographic_poi I-geographic_poi I-geographic_poi O O O B-object_type O B-object_name
+PlayMusic#SearchCreativeWork O O B-music_item O B-artist O B-service O O O O O B-object_type B-object_name I-object_name I-object_name I-object_name I-object_name
+SearchCreativeWork O O O B-object_type B-object_name I-object_name I-object_name I-object_name
+AddToPlaylist#PlayMusic#SearchCreativeWork O O B-music_item O B-playlist_owner B-playlist I-playlist I-playlist O O O O B-service O O O O B-artist O O O B-year O O O B-object_name I-object_name I-object_name B-object_type
+AddToPlaylist#SearchCreativeWork O B-artist I-artist O B-playlist_owner O B-playlist I-playlist O O O O O B-object_type O B-object_name I-object_name I-object_name
+SearchCreativeWork O O O O O B-object_name
+PlayMusic#SearchCreativeWork O B-artist I-artist O O B-year O O O O B-object_name I-object_name I-object_name I-object_name I-object_name I-object_name I-object_name I-object_name B-object_type
+SearchCreativeWork O O O O B-object_name I-object_name I-object_name I-object_name
+PlayMusic#SearchCreativeWork#SearchScreeningEvent O B-track I-track O B-artist I-artist O O B-object_name I-object_name O O O O O B-object_type I-object_type O B-timeRange O
+AddToPlaylist#BookRestaurant#SearchCreativeWork O O B-music_item O B-artist I-artist O B-playlist_owner B-playlist I-playlist I-playlist I-playlist O O O O O O O B-party_size_number O O B-restaurant_type O O B-object_name I-object_name I-object_name I-object_name O B-object_type
+GetWeather#RateBook#SearchCreativeWork O O B-condition_description B-timeRange O B-city O O O O B-object_name I-object_name I-object_name I-object_name I-object_name B-object_part_of_series_type B-rating_value O B-best_rating B-rating_unit O O B-object_name I-object_name I-object_name I-object_name I-object_name B-object_type
+AddToPlaylist#SearchCreativeWork O B-music_item B-playlist I-playlist O B-playlist_owner O O O O B-object_type I-object_type O B-object_name I-object_name I-object_name I-object_name I-object_name I-object_name
+AddToPlaylist#SearchCreativeWork O B-playlist I-playlist O O B-artist I-artist O O O O O O O B-object_type B-object_name I-object_name
+PlayMusic#RateBook O B-artist I-artist O B-object_name I-object_name O B-rating_value B-rating_unit
+RateBook#SearchScreeningEvent O B-object_name I-object_name I-object_name I-object_name B-rating_value O O B-best_rating B-rating_unit O O O O O B-object_type I-object_type O B-location_name I-location_name
+AddToPlaylist#RateBook#SearchCreativeWork O O O O B-artist O B-playlist_owner B-playlist I-playlist I-playlist O O O O B-object_type B-object_name I-object_name I-object_name I-object_name B-rating_value O O B-best_rating B-rating_unit O O O O B-object_type B-object_name I-object_name I-object_name I-object_name I-object_name
+RateBook B-rating_value B-rating_unit O B-object_name I-object_name I-object_name I-object_name
+PlayMusic#RateBook O B-track I-track O O O B-object_select B-object_type B-rating_value O O B-best_rating
+RateBook O B-object_select B-object_part_of_series_type B-rating_value
+RateBook O B-object_select B-object_type B-rating_value O B-best_rating
+GetWeather#RateBook O O O O O O B-timeRange I-timeRange I-timeRange I-timeRange O B-city I-city O B-country O O O B-object_part_of_series_type O O B-rating_value O B-object_name I-object_name
+BookRestaurant#GetWeather O O B-restaurant_type O B-party_size_number O B-city I-city O O O O O B-condition_temperature O B-timeRange I-timeRange I-timeRange O B-city B-country
+GetWeather#PlayMusic O O O O O O B-city O O O B-service O B-playlist
+GetWeather O O O O O B-state O O O B-city
+BookRestaurant#GetWeather O O O O O O O O O O B-served_dish O O O B-party_size_number O O B-restaurant_type O O O O O O O B-country
+AddToPlaylist#GetWeather#SearchScreeningEvent O B-music_item O O O O B-playlist_owner I-playlist_owner O B-playlist I-playlist O O O O B-condition_temperature O B-state O O O B-movie_type B-spatial_relation I-spatial_relation
+AddToPlaylist#GetWeather O B-entity_name O B-playlist_owner B-playlist I-playlist I-playlist I-playlist O O O O O O B-condition_temperature O B-city B-country
+RateBook#SearchScreeningEvent O B-object_name I-object_name I-object_name I-object_name B-rating_value O O B-best_rating B-rating_unit O O O O O B-object_type I-object_type O B-location_name I-location_name
+AddToPlaylist#SearchScreeningEvent O B-artist I-artist O B-playlist I-playlist I-playlist O O O B-object_type O B-movie_name I-movie_name
+BookRestaurant#SearchScreeningEvent O O B-party_size_description I-party_size_description I-party_size_description I-party_size_description O O B-city B-restaurant_type O O O O O O O B-movie_name I-movie_name I-movie_name
+SearchScreeningEvent O B-movie_type B-spatial_relation I-spatial_relation I-spatial_relation
+SearchScreeningEvent B-object_type I-object_type O B-location_name I-location_name
+SearchScreeningEvent O O B-movie_name O O O O
+AddToPlaylist#GetWeather#SearchScreeningEvent O B-music_item O O O O B-playlist_owner I-playlist_owner O B-playlist I-playlist O O O O B-condition_temperature O B-state O O O B-movie_type B-spatial_relation I-spatial_relation
+AddToPlaylist#PlayMusic#SearchScreeningEvent O O B-music_item O B-playlist I-playlist O O O O O O B-sort I-sort B-artist I-artist O O O O B-object_type I-object_type B-timeRange
+AddToPlaylist#SearchScreeningEvent O O O O O B-music_item O B-playlist_owner B-playlist I-playlist O O O B-movie_type O O O O O O B-location_name I-location_name O B-timeRange I-timeRange I-timeRange
+GetWeather#SearchScreeningEvent O O O O O O O O O B-city I-city O O O O O B-spatial_relation B-object_location_type I-object_location_type O B-movie_name I-movie_name
+GetWeather#SearchScreeningEvent O O O O O O B-condition_temperature B-timeRange I-timeRange I-timeRange I-timeRange B-current_location O O O O B-spatial_relation B-object_location_type I-object_location_type O O O B-movie_name I-movie_name I-movie_name
+PlayMusic#SearchCreativeWork#SearchScreeningEvent O B-track I-track O B-artist I-artist O O B-object_name I-object_name O O O O O B-object_type I-object_type O B-timeRange O
+SearchScreeningEvent O O B-location_name I-location_name B-object_type I-object_type

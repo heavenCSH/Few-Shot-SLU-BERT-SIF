@@ -1,0 +1,9 @@
+transformers==3.1.0
+argparse==1.4.0
+torch~=1.7.1+cu110
+seqeval==0.0.12
+wget~=3.2
+tqdm~=4.65.0
+TorchCRF~=1.1.0
+numpy~=1.24.3
+scikit-learn~=1.2.2

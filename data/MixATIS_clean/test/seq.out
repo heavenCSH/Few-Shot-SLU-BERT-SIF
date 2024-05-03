@@ -1,0 +1,828 @@
+atis_airport#atis_city#atis_quantity O B-state_name O O O B-city_name O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_airfare#atis_flight_no O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O B-fromloc.city_name O B-toloc.city_name O B-airline_name
+atis_city O O O B-airline_name O O
+atis_airfare#atis_capacity O O O B-cost_relative B-round_trip I-round_trip O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O O B-aircraft_code O O
+atis_city#atis_distance O O O B-airline_name O O O O O O O O O B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O B-toloc.city_name I-toloc.city_name O
+atis_aircraft#atis_airport#atis_quantity O O O O B-aircraft_code O O O O O O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_day_name#atis_flight_no O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O B-fromloc.city_name O B-toloc.city_name
+atis_ground_fare O O O B-transport_type O O B-city_name I-city_name
+atis_city#atis_ground_service#atis_meal O B-city_name O O O O O B-city_name O O B-meal O O O B-airline_code B-flight_number O O O O B-toloc.city_name I-toloc.city_name O B-arrive_time.time I-arrive_time.time
+atis_city#atis_quantity O O O B-airline_name O O O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_abbreviation#atis_airport O O O O O B-booking_class O O O O
+atis_meal#atis_quantity O B-meal O O O B-airline_name O B-flight_number I-flight_number O B-fromloc.city_name O B-toloc.city_name O O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_flight#atis_quantity O O O B-fromloc.city_name O B-toloc.city_name O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_capacity#atis_day_name#atis_flight_time O O O O O O B-aircraft_code O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_aircraft#atis_airfare#atis_ground_fare O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O B-depart_time.time_relative B-depart_time.period_of_day O O O O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name B-round_trip I-round_trip O B-airline_code O O O O O O B-transport_type O O B-city_name
+atis_airport#atis_flight#atis_ground_fare O B-state_name O O O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name B-depart_date.day_number O O O O O O O O O O B-city_name
+atis_abbreviation#atis_airfare#atis_airport O O O O B-fare_basis_code O O O O O O O B-fromloc.city_name B-fromloc.state_name O B-toloc.city_name O O O O O B-mod O B-city_name B-state_name
+atis_distance#atis_flight_no#atis_ground_fare O O O O O O B-fromloc.airport_name I-fromloc.airport_name O O B-city_name O O O O B-fromloc.city_name O B-toloc.city_name O O O O O B-transport_type O O B-airport_name I-airport_name
+atis_airfare#atis_capacity#atis_city O O O B-class_type O O B-fromloc.city_name O B-toloc.city_name O O O O O O O O O B-aircraft_code O O O O O O O B-airline_name O
+atis_flight_no O O O B-fromloc.city_name O B-toloc.city_name
+atis_ground_service O O O O O O B-airport_name I-airport_name O O B-city_name
+atis_ground_service#atis_meal O O O O O O O O O B-airport_name I-airport_name I-airport_name O O O B-meal O O O B-airline_code B-flight_number O O O O B-toloc.city_name I-toloc.city_name O B-arrive_time.time I-arrive_time.time
+atis_airport#atis_ground_service O O O B-city_name O O O O O O O B-airport_code O B-city_name I-city_name I-city_name
+atis_airline#atis_quantity O O O B-airline_code O O O O O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_capacity O O O O O O O B-aircraft_code
+atis_flight#atis_ground_fare O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O O O O B-transport_type O O B-airport_name I-airport_name
+atis_flight_time#atis_meal O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O B-meal O O O B-airline_code B-flight_number O O O O B-toloc.city_name I-toloc.city_name O B-arrive_time.time I-arrive_time.time
+atis_flight O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_day_name O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O
+atis_flight_time O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_abbreviation O O O O B-meal_code
+atis_airfare#atis_airline O O O O O B-fromloc.city_name O B-toloc.city_name B-depart_date.date_relative B-depart_date.day_name O O O O B-airline_code
+atis_quantity O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_flight#atis_meal O O O B-fromloc.city_name O B-toloc.city_name B-flight_days O O O B-meal O O O O B-flight_number O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O B-depart_date.day_name B-depart_time.period_of_day
+atis_flight_no O O O B-fromloc.city_name O B-toloc.city_name O B-airline_name
+atis_airline O O O O O O O O O B-fromloc.city_name B-toloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_city O B-city_name
+atis_aircraft#atis_ground_service O O O O O O O B-fromloc.city_name O B-toloc.city_name B-depart_time.time_relative B-depart_time.period_of_day O O O O O O O O B-city_name
+atis_meal O B-meal_description O O B-airline_name I-airline_name
+atis_city#atis_ground_fare O B-city_name O O O O O B-transport_type O O B-airport_name I-airport_name
+atis_abbreviation O O O O B-fare_basis_code O
+atis_airfare#atis_distance O O O O O B-fromloc.city_name O B-toloc.city_name B-cost_relative B-fare_amount I-fare_amount O O O O O B-airport_name I-airport_name I-airport_name O O
+atis_city O O O O O B-airline_name O
+atis_ground_service#atis_meal O O O O O O O O B-city_name O O O B-meal O O O B-airline_name O B-flight_number I-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_aircraft O O B-city_name I-city_name O O O O O O O O O B-airline_name I-airline_name
+atis_ground_service O O O O O B-city_name
+atis_airline#atis_quantity O O O B-airline_code O O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_airline O O O B-airline_code
+atis_airport#atis_city O O B-state_name O O O B-city_name
+atis_capacity#atis_meal O O O O B-airline_name O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O B-meal O O O O B-flight_number O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O B-depart_date.day_name B-depart_time.period_of_day
+atis_aircraft#atis_airline#atis_distance O O O O O O O O O B-aircraft_code O O O O B-airline_code O O O O O B-airport_name I-airport_name O O
+atis_day_name#atis_quantity O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_airport O O O B-city_name I-city_name
+atis_airport#atis_ground_service O O B-state_name O O O O O O O O B-city_name
+atis_airline#atis_flight_no O O O B-airline_code O O O O O O O O O O O B-fromloc.city_name O O O B-toloc.city_name
+atis_aircraft#atis_airline#atis_ground_service O O O O O O O B-fromloc.city_name O B-toloc.city_name B-depart_time.time_relative B-depart_time.period_of_day O O O O O B-fromloc.city_name B-fromloc.state_code O B-toloc.city_name B-toloc.state_name O O O O O O O O O B-airport_name I-airport_name I-airport_name I-airport_name
+atis_flight_time#atis_quantity O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_airfare#atis_day_name#atis_quantity O B-class_type I-class_type O B-round_trip I-round_trip O B-fromloc.city_name O B-toloc.city_name O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_airline#atis_day_name O O O B-airline_code O O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O
+atis_capacity O O O O O O O O B-aircraft_code
+atis_airport#atis_ground_service#atis_meal O B-state_name O O O O O O O B-city_name I-city_name O O B-meal O O O O B-flight_number O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O B-depart_date.day_name B-depart_time.period_of_day
+atis_capacity#atis_flight O O O O B-airline_name O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O O B-airline_name I-airline_name O O O B-toloc.city_name
+atis_ground_fare O O O O O B-transport_type O B-city_name
+atis_meal O B-meal O O O O B-flight_number O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O B-depart_date.day_name B-depart_time.period_of_day
+atis_day_name#atis_flight#atis_meal O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O B-depart_date.month_name B-depart_date.day_number O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O B-meal O O O B-airline_code B-flight_number O O O O B-toloc.city_name I-toloc.city_name O B-arrive_time.time I-arrive_time.time
+atis_abbreviation O O B-restriction_code I-restriction_code O
+atis_capacity#atis_distance O O O O O O O B-aircraft_code O O O O O O O O B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O O B-city_name
+atis_abbreviation#atis_meal O O B-airline_code O O O B-meal_description O O B-airline_name I-airline_name
+atis_airfare#atis_airline#atis_day_name O O O B-class_type I-class_type B-round_trip I-round_trip O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O B-airline_code O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O
+atis_day_name O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O
+atis_flight_time#atis_quantity O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_capacity O O O O O O O O B-aircraft_code
+atis_day_name#atis_flight_time O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_ground_fare#atis_ground_service O B-transport_type O O O B-city_name I-city_name I-city_name O O O O O O O O O B-airport_name I-airport_name I-airport_name I-airport_name
+atis_capacity#atis_meal O O O O O O O O B-aircraft_code O O O B-meal O O O B-airline_name O B-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_city#atis_quantity O O O O B-fromloc.city_name O B-airline_name I-airline_name O B-class_type I-class_type O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_airport#atis_distance O B-state_name O O O O O B-airport_name I-airport_name I-airport_name O O
+atis_airfare#atis_flight_no#atis_quantity B-cost_relative B-round_trip I-round_trip O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name B-depart_date.day_number I-depart_date.day_number O O O O B-fromloc.city_name O B-toloc.city_name O O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_ground_service#atis_meal O O O O O O B-airport_name I-airport_name O O O O O O O O O O B-period_of_day O O O B-meal_description O O B-airline_name I-airline_name
+atis_city#atis_quantity O B-city_name O O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_capacity#atis_day_name O O O O O O O B-aircraft_code O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O
+atis_day_name#atis_flight_no#atis_ground_fare O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O B-transport_type O O B-city_name
+atis_airline#atis_quantity O O O B-airline_code O O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_quantity O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_day_name#atis_quantity O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_abbreviation#atis_ground_service O O O B-aircraft_code O O O O O O O O O O O B-airport_name I-airport_name I-airport_name
+atis_aircraft#atis_meal O O O O O O O O B-airline_name O O O B-depart_time.time I-depart_time.time O O O B-meal O O O B-airline_name O B-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_airfare#atis_ground_service B-cost_relative B-round_trip I-round_trip O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name B-depart_date.day_number I-depart_date.day_number O O O O O O O O B-city_name O B-day_name B-period_of_day
+atis_airfare#atis_distance O O B-depart_date.day_name O O B-fromloc.city_name O B-toloc.city_name O O O O O B-airport_name I-airport_name I-airport_name O O
+atis_aircraft#atis_flight O O B-city_name I-city_name O O O O O O O O O B-airline_name I-airline_name O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name I-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day
+atis_airfare#atis_ground_fare O O O B-class_type O O B-fromloc.city_name O B-toloc.city_name O O O O O B-transport_type O O B-city_name I-city_name
+atis_abbreviation#atis_distance O O O O B-fare_basis_code O O O O O B-airport_name I-airport_name I-airport_name O O
+atis_capacity#atis_city#atis_flight_time O O O O O O O O B-aircraft_code O O O O O B-fromloc.city_name O B-airline_name I-airline_name O B-class_type I-class_type O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_aircraft O O O O O O B-aircraft_code
+atis_abbreviation#atis_meal O O O O B-fare_basis_code O O O O B-meal O O O B-airline_name O B-flight_number I-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_airfare#atis_meal O O O B-fromloc.city_name O B-toloc.city_name O O O B-meal O O O B-airline_code B-flight_number O O O O B-toloc.city_name I-toloc.city_name O B-arrive_time.time I-arrive_time.time
+atis_ground_service O B-airport_name I-airport_name O O O O O O O O O
+atis_distance#atis_ground_service#atis_quantity O O O O O O B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O B-toloc.city_name I-toloc.city_name O O O O O O O O O O B-city_name O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_abbreviation#atis_capacity#atis_city O O B-airport_code O O O O O O O O B-aircraft_code O O O O O O O B-airline_name O
+atis_capacity#atis_flight#atis_ground_service O O O O O O O O O O B-aircraft_code O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O B-stoploc.airport_code O O O O O O O B-airport_name I-airport_name O O B-city_name
+atis_day_name#atis_distance O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O O O O B-fromloc.city_name I-fromloc.city_name B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O O B-city_name I-city_name I-city_name
+atis_distance#atis_flight_time#atis_ground_fare O O O O O O B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O B-toloc.city_name I-toloc.city_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O B-transport_type O O B-city_name I-city_name
+atis_abbreviation#atis_ground_fare O O O O B-fare_basis_code O O O O O O O O B-transport_type O B-city_name
+atis_airfare#atis_ground_fare O O B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name O B-airline_name B-airline_name B-airline_name I-airline_name O B-airline_name I-airline_name O O O O O O B-transport_type O O B-airport_name I-airport_name
+atis_ground_fare#atis_ground_service#atis_meal O O O O B-transport_type O O B-airport_name I-airport_name O O O O O O O B-airport_name I-airport_name O O B-city_name O O O B-meal O O O B-airline_name O B-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_aircraft#atis_quantity O O O O B-aircraft_code O O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_capacity#atis_ground_fare O O O O O O O B-aircraft_code O O O O O B-transport_type O O B-city_name
+atis_flight#atis_ground_service O O O O O O O O B-fromloc.city_name O O O B-toloc.city_name B-depart_date.day_name B-depart_time.time_relative B-depart_time.time I-depart_time.time O O O O O O B-airport_code O B-city_name I-city_name I-city_name
+atis_airfare#atis_flight_time O O O B-cost_relative O O O O O B-fromloc.city_name B-fromloc.state_code O B-toloc.city_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_flight O O O O O O B-fromloc.city_name O B-toloc.city_name B-flight_stop O B-meal_description O
+atis_airline#atis_flight O O O O O O O B-fromloc.city_name O B-toloc.city_name O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_distance#atis_quantity O O O O O O B-fromloc.city_name I-fromloc.city_name B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O O B-city_name I-city_name I-city_name O O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_airport#atis_meal O O O B-city_name O O O B-meal O O O O B-flight_number O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O B-depart_date.day_name B-depart_time.period_of_day
+atis_airfare#atis_airport#atis_flight_time O O O O O B-fromloc.city_name O B-toloc.city_name B-cost_relative B-fare_amount I-fare_amount O O O O B-city_name I-city_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_aircraft#atis_ground_fare O O O O O O B-aircraft_code O O O O O O O B-transport_type O B-city_name
+atis_aircraft#atis_meal O O O O B-aircraft_code O O O O B-meal O O O O B-flight_number O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O B-depart_date.day_name B-depart_time.period_of_day
+atis_airfare#atis_day_name#atis_flight_no O O O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name B-round_trip I-round_trip O B-airline_code O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O B-fromloc.city_name O B-toloc.city_name O B-airline_name
+atis_aircraft O O O O B-aircraft_code O
+atis_capacity#atis_city#atis_flight_time O O O O O B-aircraft_code O O O O O O B-airline_name O O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_city#atis_flight_no O B-city_name O O O O O O O O O O O B-depart_date.day_name B-depart_time.time_relative B-depart_time.time I-depart_time.time O B-fromloc.city_name O O B-toloc.city_name I-toloc.city_name I-toloc.city_name
+atis_capacity#atis_flight_time#atis_meal O O O O O O O B-aircraft_code O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O B-meal_description O O B-airline_name I-airline_name
+atis_city#atis_day_name O O O O B-fromloc.city_name O B-airline_name I-airline_name O B-class_type I-class_type O O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O
+atis_city#atis_meal O B-city_name O O O B-meal O O O B-airline_name O B-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_airport#atis_quantity O O O B-city_name O O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_aircraft#atis_quantity O O O O O O B-aircraft_code O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_flight_no O O O O O O O O O B-fromloc.city_name O O O B-toloc.city_name
+atis_day_name#atis_distance O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O B-city_name I-city_name B-airport_name I-airport_name O O
+atis_airfare O O O B-class_type I-class_type B-round_trip I-round_trip O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_aircraft#atis_distance#atis_ground_fare O O O O O O B-aircraft_code O O O O B-city_name I-city_name B-airport_name I-airport_name O O O O O O O O B-transport_type O O B-airport_name I-airport_name
+atis_aircraft#atis_flight#atis_meal O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O B-depart_time.time_relative B-depart_time.period_of_day O B-depart_time.time_relative B-depart_time.time I-depart_time.time O B-depart_date.day_name B-depart_date.month_name B-depart_date.day_number O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O B-meal_description O O B-airline_name I-airline_name
+atis_airfare#atis_day_name#atis_ground_service O O O B-class_type I-class_type B-round_trip I-round_trip O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O O O O O O B-airport_name I-airport_name
+atis_capacity#atis_distance#atis_meal O O O O O O O O B-aircraft_code O O O O O O O B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O O B-city_name O O O B-meal O O O B-airline_code B-flight_number O O O O B-toloc.city_name I-toloc.city_name O B-arrive_time.time I-arrive_time.time
+atis_flight#atis_meal O O O O O B-depart_date.day_name B-depart_time.period_of_day O B-fromloc.city_name O B-toloc.city_name O O B-meal O O O B-airline_name O B-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_airline#atis_flight_time O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_airport#atis_city O O O O O O O B-city_name I-city_name I-city_name O O O O O O O B-fromloc.city_name O B-airline_name I-airline_name O B-class_type I-class_type
+atis_city O O O O B-fromloc.city_name O B-airline_name I-airline_name O B-class_type I-class_type
+atis_airline O O O O O O O B-fromloc.city_name O B-toloc.city_name B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name
+atis_airline O O O O O O O O B-city_name
+atis_airfare#atis_capacity#atis_flight O B-class_type B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O O O O O B-aircraft_code O O O O B-airline_name O B-flight_number O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_abbreviation#atis_capacity#atis_meal O O O O B-fare_basis_code O O O O O O O O O B-aircraft_code O O B-meal O O O B-airline_code B-flight_number O O O O B-toloc.city_name I-toloc.city_name O B-arrive_time.time I-arrive_time.time
+atis_airport#atis_ground_fare#atis_ground_service O O O B-city_name O O O O O B-transport_type O O B-city_name O O O O O O O B-city_name
+atis_distance O O O O O O B-fromloc.airport_name I-fromloc.airport_name O O B-city_name
+atis_flight_no#atis_quantity O O O B-fromloc.city_name O B-toloc.city_name O B-airline_name O O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_aircraft#atis_ground_service O O B-city_name I-city_name O O O O O O O O O B-airline_name I-airline_name O O O O O O B-city_name
+atis_abbreviation#atis_city#atis_ground_service O O O O B-fare_basis_code O O O O O O B-fromloc.city_name O B-airline_name I-airline_name O B-class_type I-class_type O O O O B-city_name I-city_name
+atis_abbreviation#atis_ground_fare O O O B-airline_code O O O O O B-transport_type O O O B-city_name I-city_name I-city_name
+atis_flight#atis_meal O O O O O O B-depart_date.day_name B-depart_time.period_of_day O B-fromloc.city_name O B-toloc.city_name O O O B-meal O O O B-airline_code B-flight_number O O O O B-toloc.city_name I-toloc.city_name O B-arrive_time.time I-arrive_time.time
+atis_airfare#atis_meal O O O O O B-fromloc.city_name B-fromloc.state_name O B-toloc.city_name O O O B-meal O O O B-airline_name I-airline_name
+atis_flight#atis_ground_fare O O O B-depart_time.period_of_day O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O O B-transport_type O O B-city_name I-city_name
+atis_capacity O O O O O O O B-aircraft_code
+atis_airline#atis_capacity O O O B-airline_code O O O O O O O O O B-aircraft_code
+atis_capacity O O O O O O O B-aircraft_code
+atis_ground_service O O O B-city_name I-city_name
+atis_city#atis_meal O B-city_name O O O B-meal O O O B-airline_name O B-flight_number I-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_abbreviation O O B-restriction_code I-restriction_code O
+atis_capacity O O O O O O O B-aircraft_code
+atis_airfare#atis_distance O O O B-cost_relative B-round_trip I-round_trip O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O O O B-fromloc.city_name I-fromloc.city_name B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O O B-city_name I-city_name I-city_name
+atis_airfare O B-depart_date.month_name B-depart_date.day_number O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-depart_time.time_relative B-depart_time.time I-depart_time.time
+atis_abbreviation#atis_city O O B-restriction_code I-restriction_code O O O O O O O B-fromloc.city_name O B-airline_name I-airline_name O B-class_type I-class_type
+atis_flight_time#atis_meal O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O B-meal O O O B-airline_name O B-flight_number I-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_city#atis_day_name O B-city_name O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O
+atis_day_name#atis_ground_fare O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O O O B-transport_type O O B-airport_name I-airport_name
+atis_city#atis_meal O B-city_name O O B-meal O O O B-airline_name O B-flight_number I-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_airport#atis_capacity O O O B-city_name O O O O O O O O B-aircraft_code
+atis_capacity#atis_flight O O O O O O O B-aircraft_code O O O B-airline_name I-airline_name O O B-meal
+atis_abbreviation O O O O B-fare_basis_code O
+atis_city#atis_ground_fare O O O O O B-airline_name O O O O O O B-transport_type O O B-airport_name I-airport_name
+atis_aircraft#atis_quantity O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O B-depart_time.time_relative B-depart_time.period_of_day O O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_airport#atis_quantity O O B-state_name O O O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_aircraft#atis_airport#atis_ground_service O O O O B-aircraft_code O O O O O B-state_name I-state_name O B-state_name O O O O O O O B-city_name
+atis_day_name#atis_ground_fare O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O O B-transport_type O O B-airport_name I-airport_name
+atis_meal O B-meal O O O B-airline_name O B-flight_number I-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_capacity O O O O O B-aircraft_code O O
+atis_flight#atis_ground_fare O B-flight_mod O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name I-toloc.city_name O B-depart_date.day_name O O O O O O B-transport_type O O B-city_name
+atis_aircraft#atis_airfare#atis_airline O O O O B-aircraft_code O O O B-depart_date.day_name O O B-fromloc.city_name O B-toloc.city_name O O O O O O O O O O O B-fromloc.city_name B-toloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_flight O O B-cost_relative O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name B-round_trip I-round_trip O B-airline_code
+atis_aircraft#atis_day_name#atis_flight_time O O O O B-aircraft_code O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_city#atis_ground_fare O O O B-airline_name O O O O O O O O B-transport_type O O B-city_name
+atis_aircraft#atis_airfare#atis_city O O O O B-aircraft_code O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O B-city_name
+atis_airport#atis_capacity O O B-state_name O O O O O O O O O O B-aircraft_code
+atis_quantity O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_abbreviation#atis_flight_no O O B-restriction_code I-restriction_code O O O O O O O O O O O O B-fromloc.city_name O O O B-toloc.city_name
+atis_airline O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_airline#atis_airport#atis_meal O O O B-airline_code O O O O O O O O O B-meal O O O O B-flight_number O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O B-depart_date.day_name B-depart_time.period_of_day
+atis_airport#atis_flight_time O O O B-city_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_airport#atis_ground_service#atis_quantity O O O B-state_name I-state_name O B-state_name O O O O O O O O B-airport_name I-airport_name I-airport_name I-airport_name O O B-city_name O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_abbreviation#atis_ground_service O O O O B-fare_basis_code O O O O O O O O B-transport_type O B-city_name B-state_code
+atis_airline#atis_day_name O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O
+atis_capacity#atis_distance O O O O O O O B-aircraft_code O O O O O O O O B-fromloc.city_name I-fromloc.city_name B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O O B-city_name I-city_name I-city_name
+atis_flight#atis_quantity O O O B-flight_days O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_airline#atis_day_name#atis_distance O O O B-airline_code O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O
+atis_ground_fare#atis_quantity O O O O O O O O B-city_name O O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_abbreviation#atis_city#atis_flight O O O O B-fare_basis_code O O O B-city_name O O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O B-depart_date.day_name B-depart_time.period_of_day
+atis_ground_fare O O O O B-transport_type O O B-airport_name I-airport_name
+atis_aircraft#atis_ground_fare O O O O O O B-aircraft_code O O O O O O B-transport_type O O B-airport_name I-airport_name
+atis_airfare#atis_ground_service O O O O O B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name B-depart_date.date_relative B-depart_date.day_name O O O O O O O O B-airport_name I-airport_name
+atis_city#atis_ground_fare O B-city_name O O O O O O B-transport_type O O B-airport_name I-airport_name
+atis_distance O O O O O O B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O B-toloc.city_name I-toloc.city_name O
+atis_aircraft#atis_capacity#atis_day_name O O O O O O O B-fromloc.city_name O B-toloc.city_name B-depart_time.time_relative B-depart_time.period_of_day O O O O O O O O O B-aircraft_code O O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O
+atis_distance#atis_flight_time#atis_quantity O O O B-airport_name I-airport_name I-airport_name O O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_abbreviation#atis_airline#atis_day_name O O B-restriction_code I-restriction_code O O O O O B-airline_code O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O
+atis_airline O O O O O O O B-fromloc.city_name O B-toloc.city_name O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name
+atis_ground_service O O O O O O B-city_name
+atis_airline#atis_capacity#atis_quantity O O O O B-toloc.city_name O O O O O O O O O B-aircraft_code O O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_day_name#atis_meal O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O B-meal_description O O B-airline_name I-airline_name
+atis_ground_service O O O O O O B-airport_code O O B-city_name
+atis_ground_service O O O O O O O B-airport_name I-airport_name
+atis_flight_no#atis_meal O O O O O O O O O B-depart_date.day_name B-depart_time.time_relative B-depart_time.time I-depart_time.time O B-fromloc.city_name O O B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O B-meal O O O B-airline_name O B-flight_number I-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_flight_no O O O O O O O O O B-depart_date.day_name B-depart_time.time_relative B-depart_time.time I-depart_time.time O B-fromloc.city_name O O B-toloc.city_name I-toloc.city_name I-toloc.city_name
+atis_aircraft#atis_city O O O O B-aircraft_code O O O O B-city_name
+atis_distance#atis_meal O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O B-meal O O O B-airline_name O B-flight_number I-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_capacity#atis_quantity O O O O O O O O B-aircraft_code O O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_airfare#atis_airport#atis_day_name O O O B-class_type I-class_type B-round_trip I-round_trip O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O B-state_name O O O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O
+atis_airline#atis_distance O O O O O B-fromloc.city_name O O O O O B-city_name I-city_name B-airport_name I-airport_name O O
+atis_airline#atis_ground_fare O O O B-airline_code O O O O O B-transport_type O O B-airport_name I-airport_name
+atis_distance#atis_flight#atis_ground_service O O O O O O B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O O B-city_name O O B-airline_name O O B-fromloc.city_name O B-toloc.city_name B-depart_time.time_relative B-depart_time.time I-depart_time.time O O O O O O O B-city_name
+atis_flight#atis_flight_no O O O B-fromloc.city_name O B-toloc.city_name B-depart_date.day_name O O O O O B-fromloc.city_name O B-toloc.city_name
+atis_airline#atis_capacity O O O B-airline_code O O O O O O O B-aircraft_code
+atis_airfare#atis_flight_no#atis_ground_service O O O B-cost_relative O O O O O B-fromloc.city_name B-fromloc.state_code O B-toloc.city_name O O O O B-fromloc.city_name O B-toloc.city_name O O O B-airport_name I-airport_name O O O O O O O O O
+atis_flight_no#atis_flight_time O O O B-fromloc.city_name O B-toloc.city_name O B-airline_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_airline#atis_capacity#atis_day_name O O O B-airline_code O O O O O O O O B-aircraft_code O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O
+atis_capacity#atis_distance#atis_flight_no O O O O O O O O B-aircraft_code O O O O B-airport_name I-airport_name I-airport_name O O O O O O B-fromloc.city_name O B-toloc.city_name
+atis_capacity O O O O O O O B-aircraft_code
+atis_airport O B-state_name O
+atis_abbreviation#atis_day_name O O B-airport_code O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O
+atis_abbreviation#atis_aircraft O O B-airline_code O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name B-depart_time.time_relative B-depart_time.period_of_day
+atis_airfare#atis_city#atis_flight_no O O B-cost_relative O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O B-fromloc.city_name O B-airline_name I-airline_name O B-class_type I-class_type O O O O B-fromloc.city_name O B-toloc.city_name
+atis_airport#atis_capacity#atis_day_name O B-state_name B-state_name B-state_name O O O O O O O O O O B-aircraft_code O O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O
+atis_day_name#atis_ground_service#atis_quantity O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O B-city_name I-city_name O O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_abbreviation#atis_airline#atis_flight O O O O B-fare_basis_code O O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O O O B-flight_stop O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_abbreviation#atis_capacity O O O O B-fare_basis_code O O O O O O O O O O B-aircraft_code
+atis_flight_time#atis_meal O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O B-meal O O O B-airline_name O B-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_airline#atis_flight_time O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_airline#atis_airport#atis_city O O O B-airline_code O O O O O O O B-airline_name O O
+atis_day_name#atis_flight_time#atis_ground_fare O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O B-transport_type O O B-airport_name I-airport_name
+atis_abbreviation#atis_flight_time O O O O B-fare_basis_code O O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_city#atis_flight#atis_flight_no O B-city_name O B-fromloc.city_name O B-toloc.city_name B-depart_time.time_relative B-depart_time.time I-depart_time.time O O O O O B-fromloc.city_name O B-toloc.city_name
+atis_day_name#atis_flight_no#atis_ground_fare O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O B-fromloc.city_name O B-toloc.city_name O O B-transport_type O O O B-city_name I-city_name I-city_name
+atis_capacity#atis_day_name#atis_distance O O O O O B-aircraft_code O O O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O O O O O B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O O B-city_name
+atis_flight_no#atis_flight_time O O O O O O O O O B-fromloc.city_name O O O B-toloc.city_name O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_ground_fare#atis_ground_service O O O O B-transport_type O O B-city_name O O O O O O O B-city_name I-city_name
+atis_airfare#atis_city#atis_ground_service O O O B-cost_relative B-round_trip I-round_trip O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name B-depart_date.day_number I-depart_date.day_number B-depart_date.year O O B-city_name O O O O O O O B-city_name
+atis_flight O O O B-depart_date.day_name O O B-fromloc.city_name O B-toloc.city_name
+atis_day_name#atis_distance O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O O O O O B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O O B-city_name
+atis_airport#atis_ground_fare O O O B-city_name O O O O O B-transport_type O O B-city_name
+atis_aircraft#atis_distance#atis_ground_service O O B-city_name I-city_name O O O O O O O O O B-airline_name I-airline_name O O O O O O O B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O B-toloc.city_name I-toloc.city_name O O O O O O O B-airport_code O B-city_name I-city_name I-city_name
+atis_capacity O O O O O O O B-aircraft_code
+atis_abbreviation#atis_airline#atis_city O O B-fare_basis_code O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O B-airline_name O O
+atis_aircraft#atis_distance O O O O O O O O O B-aircraft_code O O O O O B-airport_name I-airport_name I-airport_name O O
+atis_city O O O B-airline_name O O O
+atis_airport#atis_ground_service O B-state_name B-state_name B-state_name O O O O O O O O O O O O B-airport_name I-airport_name I-airport_name
+atis_ground_fare O O O O O O O O B-city_name
+atis_capacity#atis_flight_no O O O O O O O B-aircraft_code O O O O O B-fromloc.city_name O B-toloc.city_name O B-airline_name
+atis_capacity#atis_quantity O O O O O O O O B-aircraft_code O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_abbreviation#atis_airline O O B-airline_code O O O O O O O B-fromloc.city_name B-fromloc.state_code O B-toloc.city_name B-toloc.state_name
+atis_flight_no#atis_flight_time O O O O O O O O O B-fromloc.city_name O O O B-toloc.city_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_flight_no#atis_ground_service O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O B-airport_name I-airport_name O O B-city_name
+atis_city#atis_quantity O O O B-airline_name O O O O O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_flight_no O O O B-fromloc.city_name O B-toloc.city_name O B-airline_name
+atis_flight O O O B-fromloc.city_name B-fromloc.state_code O B-toloc.city_name
+atis_abbreviation#atis_aircraft#atis_airline O O B-airline_code O O O O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O B-depart_time.time_relative B-depart_time.period_of_day O O O O O B-airline_code
+atis_day_name#atis_distance#atis_quantity O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O O O O B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O B-toloc.city_name I-toloc.city_name O O O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_airport#atis_city#atis_ground_service O O O B-city_name O O O O B-airline_name O O O O O O O O O O O O B-airport_name I-airport_name
+atis_ground_service O O O O O B-transport_type O B-city_name B-state_code
+atis_abbreviation#atis_meal O O O B-aircraft_code O O O B-meal O O O O B-flight_number O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O B-depart_date.day_name B-depart_time.period_of_day
+atis_airline#atis_ground_fare O O O B-airline_code O O O O O O O B-transport_type O B-city_name
+atis_airport#atis_ground_fare O O O O B-city_name O O O O O B-transport_type O O B-city_name I-city_name
+atis_abbreviation#atis_flight O O O O B-fare_basis_code O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_flight#atis_flight_time O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name B-depart_time.period_of_day O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_flight#atis_ground_service O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O O B-airport_name I-airport_name
+atis_distance#atis_flight#atis_flight_time O O O B-airport_name I-airport_name I-airport_name O O O O O O O O B-fromloc.city_name O B-toloc.city_name B-connect O B-stoploc.city_name I-stoploc.city_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_abbreviation#atis_flight_no O O B-airline_code O O O O O O B-fromloc.city_name O B-toloc.city_name O B-airline_name
+atis_ground_service O O O O O B-city_name
+atis_flight#atis_ground_service B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name O O O O O O O B-transport_type O B-city_name
+atis_airline#atis_ground_fare O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O O O O B-transport_type O O B-airport_name I-airport_name
+atis_aircraft#atis_airport O O O O O O O B-fromloc.city_name O B-toloc.city_name B-depart_time.time_relative B-depart_time.period_of_day O O O O O O B-city_name
+atis_day_name#atis_meal O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O B-meal O O O B-airline_name I-airline_name
+atis_ground_service O O O O O B-city_name
+atis_flight#atis_meal O O O O O O B-airline_name O O B-fromloc.city_name I-fromloc.city_name I-fromloc.city_name O B-toloc.city_name I-toloc.city_name B-depart_date.date_relative B-depart_date.day_name O B-arrive_time.time_relative B-arrive_time.time I-arrive_time.time O O B-meal O O O B-airline_name I-airline_name
+atis_airfare#atis_airport B-cost_relative O B-round_trip I-round_trip O B-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name B-depart_date.day_number I-depart_date.day_number O O O O O O O O B-city_name I-city_name
+atis_flight#atis_flight_no O O O O O B-fromloc.city_name O B-toloc.city_name O B-airline_name O O B-meal B-depart_time.period_mod B-depart_date.day_name B-depart_time.period_of_day O O O O O B-fromloc.city_name O B-toloc.city_name
+atis_airline#atis_airport#atis_flight_time O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O B-state_name I-state_name O B-state_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_flight_no#atis_meal O O O B-fromloc.city_name O B-toloc.city_name O B-airline_name O O O B-meal O O O B-airline_name O B-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_aircraft#atis_city O O O O O O O O B-airline_name O O O B-depart_time.time I-depart_time.time O O O O O B-airline_name O O O
+atis_abbreviation#atis_airfare O O B-aircraft_code O O O O O O O B-fromloc.city_name O B-toloc.city_name
+atis_abbreviation#atis_aircraft O O B-restriction_code I-restriction_code O O O O O O B-aircraft_code O
+atis_abbreviation#atis_aircraft#atis_distance O O O B-airline_code O O O O O O O O O O O B-airline_name O O O B-depart_time.time I-depart_time.time O O O O O O O O O B-city_name I-city_name
+atis_day_name#atis_flight_no O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O O B-airline_name I-airline_name O B-fromloc.city_name O B-toloc.city_name
+atis_city#atis_flight#atis_meal O B-city_name O O O O B-toloc.city_name I-toloc.city_name I-toloc.city_name B-arrive_date.date_relative B-arrive_date.day_name O O O B-meal O O O B-airline_name O B-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_airfare#atis_flight_no#atis_ground_fare O O O B-cost_relative B-round_trip I-round_trip B-class_type O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O B-transport_type O O B-airport_name I-airport_name
+atis_airport#atis_flight_no#atis_ground_service O O O O B-city_name O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O B-airport_code O B-city_name I-city_name I-city_name
+atis_ground_fare#atis_meal O O O O O B-transport_type O B-city_name O O B-meal O O O B-airline_name I-airline_name
+atis_day_name#atis_flight O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O O B-flight_mod I-flight_mod O O B-fromloc.city_name O B-toloc.city_name
+atis_capacity#atis_ground_fare O O O O O O O B-aircraft_code O O O B-transport_type O O O B-city_name I-city_name I-city_name
+atis_airfare#atis_day_name O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O
+atis_ground_service O O O O O B-transport_type O B-city_name
+atis_airport O B-state_name B-state_name B-state_name O
+atis_flight_no#atis_flight_time O O O B-fromloc.city_name O B-toloc.city_name O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_airport#atis_distance O O O O O O O B-city_name I-city_name I-city_name O O O O O O O O O O B-city_name I-city_name
+atis_distance#atis_flight#atis_flight_time O O O O O O B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O B-toloc.city_name I-toloc.city_name O O O O O O O B-fromloc.city_name O B-toloc.city_name O O B-depart_date.day_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_aircraft#atis_airline O O O O O O O O B-airline_name O O O B-depart_time.time I-depart_time.time O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_airline O O O O B-toloc.city_name
+atis_distance O O O B-city_name I-city_name B-airport_name I-airport_name O O
+atis_airline#atis_quantity O O O B-airline_code O O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_aircraft O O O O O O O B-fromloc.city_name O B-toloc.city_name B-depart_time.time_relative B-depart_time.period_of_day
+atis_capacity#atis_flight O O O O O O O O B-aircraft_code O O O O O O B-fromloc.city_name O B-toloc.city_name
+atis_aircraft O O O O O O O O O B-aircraft_code
+atis_abbreviation#atis_day_name#atis_distance O O B-mod B-days_code O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O B-city_name I-city_name B-airport_name I-airport_name O O
+atis_airport#atis_city#atis_meal O O O B-city_name O O B-city_name O O O B-meal O O O O B-flight_number O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O B-depart_date.day_name B-depart_time.period_of_day
+atis_distance#atis_flight O O O O O O B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O O B-city_name O O O O B-airline_name I-airline_name O O B-meal
+atis_airport#atis_day_name O O O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O
+atis_flight_no#atis_meal O O O B-fromloc.city_name O B-toloc.city_name O O B-meal O O O B-airline_name I-airline_name
+atis_flight_time#atis_quantity O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_airfare#atis_ground_service O O O B-cost_relative I-cost_relative O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O O O O O O O B-airport_name I-airport_name I-airport_name I-airport_name
+atis_capacity#atis_city#atis_distance O O O O O O O O O O B-aircraft_code O O O O O O B-airline_name O O O O O O O O B-fromloc.airport_name I-fromloc.airport_name O O B-city_name
+atis_city#atis_ground_service O B-city_name O O O O O B-city_name I-city_name
+atis_meal O B-meal O O O B-airline_name I-airline_name
+atis_ground_fare#atis_quantity O O O O B-transport_type O O B-airport_name I-airport_name O O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_capacity#atis_flight#atis_meal O O O O O O O B-aircraft_code O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name B-depart_time.period_of_day O O O B-meal O O O B-airline_code B-flight_number O O O O B-toloc.city_name I-toloc.city_name O B-arrive_time.time I-arrive_time.time
+atis_distance#atis_flight O O O O O O O B-city_name I-city_name O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name
+atis_flight O O O O O O B-fromloc.city_name O B-toloc.city_name O B-airline_name
+atis_flight_time#atis_ground_fare O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O O B-transport_type O O B-city_name
+atis_aircraft#atis_airport O O O O O O O B-fromloc.city_name O B-toloc.city_name B-depart_time.time_relative B-depart_time.period_of_day O O O B-state_name O
+atis_airline O O O B-airline_code
+atis_day_name#atis_ground_service#atis_quantity O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O O B-city_name I-city_name O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_aircraft#atis_flight O O O O B-aircraft_code O O O O O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name
+atis_day_name#atis_ground_service O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O O O O B-airport_name I-airport_name
+atis_abbreviation#atis_aircraft O O B-aircraft_code O O O O B-city_name I-city_name O O O O O O O O O B-airline_name I-airline_name
+atis_ground_fare#atis_ground_service O O O B-transport_type O O B-city_name I-city_name O O O O O O O O O B-airport_name I-airport_name
+atis_flight_no#atis_ground_service O O O O O O O O O B-fromloc.city_name O O O B-toloc.city_name O O O O O O O O B-airport_name I-airport_name
+atis_capacity O O O O O O O O O O B-aircraft_code
+atis_day_name#atis_flight_no#atis_quantity O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O O O O O O B-fromloc.city_name O O O B-toloc.city_name O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_aircraft#atis_distance O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O B-depart_time.time_relative B-depart_time.period_of_day O O O O O O O O B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O O B-city_name
+atis_capacity#atis_day_name#atis_ground_fare O O O O B-airline_name O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O O O O O O B-city_name
+atis_airport#atis_flight_time O B-state_name B-state_name B-state_name O O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_airport#atis_city#atis_ground_fare O O O O O O B-airline_name O O O O O O O O B-transport_type O O B-airport_name I-airport_name
+atis_capacity#atis_quantity O O O O O B-aircraft_code O O O O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_city#atis_flight_no#atis_meal O O O B-airline_name O O O O O O O B-fromloc.city_name O B-toloc.city_name O O B-meal O O O B-airline_name I-airline_name
+atis_flight#atis_flight_time#atis_ground_fare O B-flight O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O B-arrive_time.start_time O B-arrive_time.end_time I-arrive_time.end_time O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O O B-transport_type O O B-city_name
+atis_ground_fare#atis_quantity O O O O B-transport_type O O B-airport_name I-airport_name O O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_day_name#atis_ground_fare O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O O B-transport_type O O B-city_name
+atis_aircraft#atis_ground_fare#atis_meal O O O O O O O O B-fromloc.city_name O O O O O O O O O B-city_name O O B-meal_description O O B-airline_name I-airline_name
+atis_city#atis_flight_no O O O O B-fromloc.city_name O B-airline_name I-airline_name O B-class_type I-class_type O O O O O B-airline_name I-airline_name O B-fromloc.city_name O B-toloc.city_name
+atis_city#atis_flight_time O O O O O B-airline_name O O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_meal O B-meal O O O B-airline_name O B-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_airfare#atis_flight O O O O O O B-class_type I-class_type B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O B-fromloc.city_name O B-toloc.city_name
+atis_capacity#atis_flight O O O O O O O O B-aircraft_code O O O O O O B-fromloc.city_name O B-toloc.city_name B-round_trip I-round_trip O B-depart_date.day_name B-depart_time.period_of_day O B-depart_date.day_name B-depart_time.period_of_day
+atis_distance#atis_flight_time O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_capacity#atis_distance O O O O O O O B-aircraft_code O O O O O O O B-fromloc.airport_name I-fromloc.airport_name O O B-city_name
+atis_aircraft#atis_ground_fare O O O O B-aircraft_code O O O O O O O B-transport_type O O B-city_name
+atis_city#atis_flight_time O B-city_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_airport O O O O B-city_name
+atis_aircraft#atis_flight_time O O O O B-aircraft_code O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_aircraft#atis_distance O O O O O O O O O B-aircraft_code O O O O O O O B-fromloc.airport_name I-fromloc.airport_name O O B-city_name
+atis_abbreviation#atis_day_name#atis_ground_service O O O O B-fare_basis_code O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O O B-city_name
+atis_flight#atis_quantity O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_city#atis_flight_time O B-city_name O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_airfare#atis_day_name O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O
+atis_abbreviation#atis_airfare#atis_airport O O O O B-fare_basis_code O O O O O B-cost_relative O O B-fromloc.city_name B-fromloc.state_code O B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O B-state_name O
+atis_airline O O O B-airline_code
+atis_ground_service O O O O O O B-city_name O B-day_name B-period_of_day
+atis_airline#atis_flight O O O B-airline_code O O O O O O B-flight_days O O O B-toloc.city_name O B-arrive_time.start_time O B-arrive_time.end_time I-arrive_time.end_time
+atis_airport#atis_meal O O O O O O B-airline_name I-airline_name O O O B-meal O O O B-airline_name O B-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_aircraft#atis_ground_fare#atis_quantity O O B-city_name I-city_name O O O O O O O O O B-airline_name I-airline_name O O O O O O B-transport_type O B-city_name O O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_airfare O B-depart_date.day_name O O B-fromloc.city_name O B-toloc.city_name
+atis_airline O O O B-airline_code
+atis_aircraft#atis_airline O O O O O O B-aircraft_code O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name
+atis_flight#atis_meal O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O B-meal O O O B-airline_name O B-flight_number I-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_airfare#atis_day_name#atis_distance O O O O O O B-class_type I-class_type O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-round_trip O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O O O O O B-fromloc.city_name I-fromloc.city_name B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O O B-city_name I-city_name I-city_name
+atis_airfare#atis_flight_time#atis_quantity O O O O O O B-class_type I-class_type O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-round_trip O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_city#atis_distance#atis_flight_no O O O B-airline_name O O O O O O O O O O B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O O B-city_name O O O O B-fromloc.city_name O B-toloc.city_name
+atis_city#atis_ground_fare O O O O O B-airline_name O O O O O O B-transport_type O O B-city_name
+atis_meal O B-meal O O O B-airline_code B-flight_number O O O O B-toloc.city_name I-toloc.city_name O B-arrive_time.time I-arrive_time.time
+atis_airport#atis_ground_service O O B-state_name O O O O O O O B-airport_code O B-city_name I-city_name I-city_name
+atis_aircraft#atis_day_name#atis_distance O O O O O O O O B-airline_name O O O B-depart_time.time I-depart_time.time O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O B-airport_name I-airport_name O O
+atis_airfare#atis_flight_time B-cost_relative O O B-fromloc.city_name O B-toloc.city_name O O B-depart_date.day_number I-depart_date.day_number O B-depart_date.month_name O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_flight O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_flight#atis_ground_fare O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name O O O O O O B-transport_type O O B-city_name
+atis_abbreviation#atis_flight_no O O O O B-fare_basis_code O O O O O O O O O O O B-depart_date.day_name B-depart_time.time_relative B-depart_time.time I-depart_time.time O B-fromloc.city_name O O B-toloc.city_name I-toloc.city_name I-toloc.city_name
+atis_abbreviation#atis_ground_service O O O O B-restriction_code O O O O O O O O O O O O B-airport_name I-airport_name I-airport_name
+atis_airfare#atis_capacity#atis_flight O O B-cost_relative O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O O O B-aircraft_code O O B-fromloc.city_name O B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day
+atis_city#atis_day_name#atis_flight O O O O O B-airline_name O O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O O B-fromloc.city_name O B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day
+atis_distance#atis_ground_service#atis_meal O O O O O O O B-city_name I-city_name O O O O O O O B-city_name O B-day_name B-period_of_day O O O B-meal O O O B-airline_name I-airline_name
+atis_flight_time#atis_ground_service O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O O B-transport_type O B-city_name
+atis_meal#atis_quantity O B-meal O O O B-airline_name O B-flight_number O B-fromloc.city_name O B-toloc.city_name O O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_airfare#atis_ground_fare O O O B-cost_relative I-cost_relative O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O O O O O O O O B-city_name
+atis_airfare#atis_meal O O O O O O O O B-airline_code O B-fromloc.city_name O B-toloc.city_name O O B-meal O O O B-airline_name O B-flight_number I-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_airline#atis_flight O O O B-airline_code O O O O O B-airline_name O O B-fromloc.city_name O B-toloc.city_name B-depart_time.time_relative B-depart_time.time I-depart_time.time
+atis_day_name#atis_flight O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O B-airline_name I-airline_name O O B-meal
+atis_distance#atis_ground_fare O O O O O O O B-city_name I-city_name O O O O O O B-transport_type O O B-airport_name I-airport_name
+atis_ground_service#atis_quantity O O O O O B-city_name I-city_name O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_airfare O B-depart_date.day_name O O B-fromloc.city_name O B-toloc.city_name
+atis_ground_service O O O O B-city_name
+atis_flight O O O B-cost_relative B-round_trip I-round_trip O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O B-arrive_time.time_relative B-arrive_time.time I-arrive_time.time
+atis_city#atis_day_name#atis_distance O O O O B-fromloc.city_name O B-airline_name I-airline_name O B-class_type I-class_type O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O B-airport_name I-airport_name O O
+atis_abbreviation#atis_flight O O O B-restriction_code I-restriction_code O O O O O O O O O O O O B-toloc.city_name O B-arrive_time.start_time O B-arrive_time.end_time I-arrive_time.end_time
+atis_abbreviation#atis_ground_fare O O O O B-restriction_code O O O O O O B-transport_type O O B-city_name I-city_name
+atis_meal#atis_quantity O B-meal O O O B-airline_name I-airline_name O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_aircraft#atis_distance O O O O B-aircraft_code O O O O O O O O O B-fromloc.city_name I-fromloc.city_name B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O O B-city_name I-city_name I-city_name
+atis_abbreviation#atis_city O O B-airline_code O O O O O O O O B-airline_name O
+atis_airport#atis_flight_no#atis_meal O O O O O O O O O B-city_name I-city_name O O O O B-airline_name I-airline_name O B-fromloc.city_name O B-toloc.city_name O O O B-meal O O O B-airline_name O B-flight_number I-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_capacity#atis_distance O O O O O O O O B-aircraft_code O O O O B-city_name I-city_name B-airport_name I-airport_name O O
+atis_city#atis_flight_no O O O B-airline_name O O O O O O B-fromloc.city_name O B-toloc.city_name
+atis_abbreviation#atis_meal O O B-airline_code O O O O B-meal_description O O B-airline_name I-airline_name
+atis_capacity O O O O O O O O B-aircraft_code
+atis_distance O O O B-airport_name I-airport_name O O
+atis_aircraft#atis_day_name#atis_flight_no O O O O O O B-aircraft_code O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O B-fromloc.city_name O B-toloc.city_name
+atis_aircraft#atis_day_name O O O O B-aircraft_code O O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O
+atis_airfare#atis_flight_time O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_flight#atis_flight_no#atis_quantity O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O B-airline_name I-airline_name O B-fromloc.city_name O B-toloc.city_name O O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_aircraft O O O O O O O O B-fromloc.city_name
+atis_aircraft#atis_ground_service O O O O O O B-aircraft_code O O O O O O O B-airport_code O O B-city_name
+atis_city#atis_quantity O O O B-airline_name O O O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_airline#atis_capacity O O O B-airline_code O O O O O O O O B-aircraft_code
+atis_airfare#atis_meal O O O B-class_type I-class_type B-round_trip I-round_trip O O O B-fromloc.city_name O B-toloc.city_name O O O B-meal O O O B-airline_name O B-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_airfare#atis_distance#atis_flight O O O O O B-fromloc.city_name O B-toloc.city_name B-cost_relative B-fare_amount I-fare_amount O O O O O O O O B-city_name I-city_name O O O O O O O B-airline_name I-airline_name O B-fromloc.airport_name I-fromloc.airport_name O B-toloc.city_name I-toloc.city_name
+atis_airline O O O B-airline_code
+atis_airport#atis_ground_service O O O B-city_name O O O O O O O O B-airport_name I-airport_name I-airport_name I-airport_name O O B-city_name
+atis_city#atis_flight O B-city_name O O O O O O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name B-depart_time.period_of_day
+atis_day_name#atis_flight_no O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O B-fromloc.city_name O B-toloc.city_name
+atis_day_name#atis_ground_service O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O O O O O B-airport_name I-airport_name
+atis_airline O O O B-city_name
+atis_airport#atis_city O O O B-city_name O O O O O B-airline_name O O O
+atis_airfare#atis_flight_time O B-depart_date.day_name O O B-fromloc.city_name O B-toloc.city_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_abbreviation#atis_capacity O O B-airport_code O O O O O O O O O B-aircraft_code
+atis_city#atis_ground_fare O B-city_name O O O O B-transport_type O O B-city_name I-city_name
+atis_capacity#atis_flight_time O O O O O O O B-aircraft_code O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_abbreviation O O B-airport_code
+atis_airline#atis_quantity O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_flight_time#atis_ground_fare O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O B-transport_type O O O B-city_name I-city_name I-city_name
+atis_distance O O O O O O O B-city_name I-city_name
+atis_abbreviation#atis_airfare O O O O B-fare_basis_code O O O O O O O O O B-class_type I-class_type B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_airfare#atis_flight_no#atis_ground_service O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O O O O B-fromloc.city_name O O O B-toloc.city_name O O O O O O O O B-airport_name I-airport_name O O B-city_name
+atis_airfare#atis_flight_no O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O B-fromloc.city_name O B-toloc.city_name
+atis_day_name#atis_flight O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O B-cost_relative O B-depart_date.today_relative O B-fromloc.city_name O B-toloc.city_name
+atis_abbreviation#atis_capacity O O O B-aircraft_code O O O O O O O O B-aircraft_code
+atis_capacity#atis_day_name#atis_flight_no O O O O O B-aircraft_code O O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O O O O O O O B-fromloc.city_name O O O B-toloc.city_name
+atis_aircraft#atis_day_name O O O O O O O O B-fromloc.city_name O O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O
+atis_airfare#atis_airport O O O B-fromloc.city_name O B-toloc.city_name O O O
+atis_meal#atis_quantity O B-meal O O O O B-flight_number O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O B-depart_date.day_name B-depart_time.period_of_day O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_airline#atis_meal O O O B-airline_code O O B-meal O O O B-airline_code B-flight_number O O O O B-toloc.city_name I-toloc.city_name O B-arrive_time.time I-arrive_time.time
+atis_airfare#atis_meal O O O B-cost_relative I-cost_relative B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O B-meal O O O B-airline_code B-flight_number O O O O B-toloc.city_name I-toloc.city_name O B-arrive_time.time I-arrive_time.time
+atis_airfare#atis_airline#atis_day_name O O O O O B-fromloc.city_name O B-toloc.city_name B-cost_relative B-fare_amount I-fare_amount O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O
+atis_abbreviation#atis_flight_no O O O O B-fare_basis_code O O O O O O B-fromloc.city_name O B-toloc.city_name
+atis_airline#atis_flight_time#atis_meal O O O O B-fromloc.airport_name I-fromloc.airport_name O B-depart_time.start_time O B-depart_time.end_time I-depart_time.end_time O B-depart_date.month_name B-depart_date.day_number O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O B-meal O O O B-airline_name O B-flight_number I-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_airfare#atis_airport#atis_flight O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O O B-city_name I-city_name I-city_name O O O O O O O B-fromloc.city_name O O O B-toloc.city_name
+atis_city#atis_meal O O O O O B-airline_name O O O O B-meal O O O B-airline_name O B-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_abbreviation#atis_day_name#atis_meal O O O O B-fare_basis_code O O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O B-meal O O O O B-flight_number O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O B-depart_date.day_name B-depart_time.period_of_day
+atis_flight O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name
+atis_capacity#atis_quantity O O O O O O O B-aircraft_code O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_aircraft#atis_flight_time#atis_ground_service O O O O O O O O B-airline_name O O O B-depart_time.time I-depart_time.time O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O O O O B-city_name O B-day_name B-period_of_day
+atis_city#atis_flight_no O B-city_name O O O O O B-fromloc.city_name O B-toloc.city_name O B-airline_name
+atis_airfare#atis_flight_no#atis_meal O O O B-class_type I-class_type B-round_trip I-round_trip O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O B-fromloc.city_name O B-toloc.city_name O O O B-meal O O O B-airline_name O B-flight_number I-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_airline#atis_flight#atis_ground_fare O O O O B-fromloc.city_name B-fromloc.state_code O B-toloc.city_name B-toloc.state_name O O O O B-fromloc.city_name B-fromloc.state_code O B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day O O O O O O B-transport_type O B-city_name
+atis_city#atis_meal O O O B-airline_name O O O O O B-meal O O O B-airline_name I-airline_name
+atis_city#atis_distance#atis_flight O B-city_name O O O O O O O B-fromloc.airport_name I-fromloc.airport_name O O B-city_name O O O B-depart_time.period_of_day B-depart_time.period_of_day O O B-fromloc.city_name O B-toloc.city_name
+atis_flight_time#atis_meal#atis_quantity O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O B-meal_description O O B-airline_name I-airline_name O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_day_name#atis_distance#atis_flight_time O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O B-airport_name I-airport_name I-airport_name O O O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_airline#atis_ground_service O O O B-airline_code O O B-airport_name I-airport_name O O O O O O O O O
+atis_airfare#atis_flight_no B-cost_relative B-round_trip I-round_trip O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name B-depart_date.day_number I-depart_date.day_number O O O O B-airline_name I-airline_name O B-fromloc.city_name O B-toloc.city_name
+atis_day_name#atis_quantity O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_airfare#atis_ground_service#atis_quantity O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O B-transport_type I-transport_type O O B-airport_name I-airport_name O O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_capacity#atis_day_name#atis_ground_fare O O O O O O O B-aircraft_code O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O B-transport_type O O B-airport_name I-airport_name
+atis_distance#atis_ground_service O O O B-city_name I-city_name B-airport_name I-airport_name O O O O O O O O O O B-airport_name I-airport_name I-airport_name I-airport_name O O B-city_name
+atis_abbreviation#atis_ground_fare#atis_ground_service O O O O B-fare_basis_code O O O O O O O O O O B-city_name O O O O O O O B-airport_code O O B-city_name
+atis_airport#atis_quantity O O O O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_abbreviation#atis_airline O O B-fare_basis_code O O O O O O B-airline_code
+atis_flight#atis_quantity O O O O B-airline_name I-airline_name O O B-toloc.city_name O O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_airline O O O B-airline_code
+atis_capacity#atis_day_name#atis_ground_service O O O O O O O O B-aircraft_code O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O O O B-transport_type O B-city_name
+atis_city#atis_distance#atis_flight_time O O O O O B-airline_name O O O O O B-airport_name I-airport_name I-airport_name O O O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_aircraft#atis_city#atis_flight_time O O O O O O O O B-airline_name O O O B-depart_time.time I-depart_time.time O O O O O O B-airline_name O O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_airline#atis_flight_time O O O B-airline_code O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_airfare O B-class_type I-class_type O B-round_trip I-round_trip O B-fromloc.city_name O B-toloc.city_name
+atis_flight O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_ground_service#atis_quantity O O O O O O O B-airport_name I-airport_name B-city_name I-city_name O O B-city_name O O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_capacity#atis_city#atis_flight_no O O O O O O O B-aircraft_code O O O O O O B-airline_name O O O O O O O O O O O O B-fromloc.city_name O O O B-toloc.city_name
+atis_airline#atis_ground_service O O O O O O O O O B-fromloc.city_name B-toloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O O O B-airport_code O B-city_name I-city_name I-city_name
+atis_airport#atis_flight_time O O O O O O O B-city_name I-city_name I-city_name O O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_airfare#atis_flight_no#atis_ground_service O O O O O O O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O O O O O O O O O O B-depart_date.day_name B-depart_time.time_relative B-depart_time.time I-depart_time.time O B-fromloc.city_name O O B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O O B-city_name I-city_name
+atis_flight_no#atis_ground_fare O O O B-airline_name I-airline_name O B-fromloc.city_name O B-toloc.city_name O O O O O O B-transport_type O O B-airport_name I-airport_name
+atis_airline#atis_city O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O B-airline_name O O
+atis_airline#atis_flight O O O O O O O B-fromloc.city_name O B-toloc.city_name O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O B-flight_mod O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name I-toloc.city_name O B-depart_date.day_name
+atis_capacity#atis_day_name#atis_meal O O O O O O B-airline_name B-aircraft_code O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O B-meal_description O O B-airline_name I-airline_name
+atis_airline O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_abbreviation#atis_quantity O O B-mod B-days_code O O O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_flight O B-airline_name I-airline_name O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name B-depart_time.period_of_day
+atis_airport#atis_distance O O O O O O B-city_name I-city_name O O O O O O O O B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O B-toloc.city_name I-toloc.city_name O
+atis_aircraft#atis_airline O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O B-depart_time.time_relative B-depart_time.period_of_day O O O O B-airline_code O O O
+atis_aircraft O O O O O O O O B-airline_name O O O B-depart_time.time I-depart_time.time
+atis_airline#atis_ground_fare O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O B-transport_type O O B-city_name I-city_name
+atis_distance#atis_ground_fare O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O B-transport_type O O O B-city_name I-city_name I-city_name
+atis_airline#atis_capacity#atis_ground_service O O O B-airline_code O O O O O O O O B-aircraft_code O O O O O O O O O B-city_name
+atis_aircraft#atis_capacity O O O O B-aircraft_code O O O O O O O O O B-aircraft_code
+atis_capacity#atis_flight_no O O O O O O O B-aircraft_code O O O O O B-fromloc.city_name O B-toloc.city_name
+atis_airport#atis_flight#atis_meal O B-state_name O O O O O O B-fromloc.city_name O B-toloc.city_name O O O B-meal O O O B-airline_name O B-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_flight O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name B-depart_date.day_number
+atis_flight#atis_ground_fare O O O O O B-fromloc.city_name O B-toloc.city_name O O O O B-transport_type O O O B-city_name I-city_name I-city_name
+atis_airport O O B-state_name O
+atis_flight#atis_ground_service O O O O B-toloc.city_name O B-fromloc.city_name I-fromloc.city_name O B-depart_date.day_name B-depart_date.month_name B-depart_date.day_number I-depart_date.day_number O O B-depart_time.period_of_day O O O O O O O O B-airport_name I-airport_name B-city_name I-city_name O O B-city_name
+atis_flight_no#atis_quantity O O O O O O O O O B-depart_date.day_name B-depart_time.time_relative B-depart_time.time I-depart_time.time O B-fromloc.city_name O O B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_abbreviation#atis_airline#atis_flight_no O O O O B-fare_basis_code O O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O O O B-fromloc.city_name O B-toloc.city_name
+atis_aircraft#atis_flight_no O O O O B-aircraft_code O O O O O O B-airline_name I-airline_name O B-fromloc.city_name O B-toloc.city_name
+atis_flight O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O
+atis_airline#atis_quantity O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_abbreviation#atis_city#atis_day_name O O O O B-fare_basis_code O O O O B-airline_name O O O O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O
+atis_airfare#atis_city#atis_flight_no O B-depart_date.day_name O O B-fromloc.city_name O B-toloc.city_name O O B-city_name O O O O O B-fromloc.city_name O B-toloc.city_name
+atis_city#atis_day_name O O O O O B-airline_name O O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O
+atis_capacity#atis_ground_service O O O O O O O B-aircraft_code O O O O O O O B-city_name I-city_name
+atis_abbreviation O O O O B-fare_basis_code O
+atis_aircraft#atis_city O O O O O O O O O B-aircraft_code O O O O O B-airline_name O O
+atis_abbreviation#atis_capacity#atis_flight O O O B-aircraft_code O O O O O O O O B-aircraft_code O O O O O O B-fromloc.city_name O B-toloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_airport#atis_capacity O O O B-city_name O O O O O O O O O O B-aircraft_code
+atis_airport O O O B-city_name
+atis_abbreviation#atis_flight_time O O O O B-fare_basis_code O O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_ground_fare O B-transport_type O O O B-city_name I-city_name I-city_name
+atis_capacity#atis_meal O O O O O O O B-aircraft_code O O B-meal O O O O B-flight_number O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O B-depart_date.day_name B-depart_time.period_of_day
+atis_airfare#atis_ground_service O O O O O B-fromloc.city_name B-fromloc.state_name O B-toloc.city_name O O O O O O B-transport_type O B-city_name
+atis_ground_fare#atis_ground_service O O O O B-transport_type O O B-city_name O O O O O O O O O B-airport_name I-airport_name
+atis_abbreviation#atis_flight O O O B-restriction_code I-restriction_code O O O O O O O B-airline_name O O B-fromloc.city_name O B-toloc.city_name O O B-meal B-depart_time.period_mod B-depart_date.day_name B-depart_time.period_of_day
+atis_airline#atis_day_name#atis_flight O O O B-airline_code O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-depart_date.day_name
+atis_abbreviation#atis_aircraft#atis_airfare O O O O B-fare_basis_code O O O O O O O O O O O B-aircraft_code O O O O O B-cost_relative B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name
+atis_day_name#atis_ground_fare O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O O B-transport_type O O B-city_name
+atis_airfare B-cost_relative O B-round_trip I-round_trip O B-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name B-depart_date.day_number I-depart_date.day_number
+atis_airline#atis_flight_time O O O O O O O O O B-fromloc.city_name B-toloc.city_name O B-toloc.city_name I-toloc.city_name O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_aircraft#atis_meal O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O B-depart_time.time_relative B-depart_time.period_of_day O O O B-meal O O O B-airline_name O B-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_abbreviation#atis_airfare O O O O B-meal_code O O O O O O O B-class_type I-class_type B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_airfare#atis_capacity#atis_ground_fare O O O B-cost_relative B-round_trip I-round_trip O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O O O O B-aircraft_code O O B-transport_type O O O B-city_name I-city_name I-city_name
+atis_capacity#atis_day_name O O O O O O B-aircraft_code O O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O
+atis_abbreviation#atis_capacity O O O O O B-booking_class O O O O O B-airline_name O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name I-toloc.city_name
+atis_aircraft#atis_ground_service O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O B-depart_time.time_relative B-depart_time.period_of_day O O O O O O O O B-city_name
+atis_abbreviation#atis_meal O O O B-aircraft_code O O O B-meal O O O B-airline_name O B-flight_number I-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_aircraft#atis_ground_service#atis_quantity O O O O O O O O B-fromloc.city_name O O O O O O O O B-airport_name I-airport_name O O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_distance#atis_quantity O O O O O O O B-city_name I-city_name O O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_airline#atis_flight_time O O O O B-fromloc.city_name B-fromloc.state_code O B-toloc.city_name B-toloc.state_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_aircraft#atis_flight#atis_flight_no O O O O O O B-aircraft_code O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O B-airline_name I-airline_name O B-fromloc.city_name O B-toloc.city_name
+atis_day_name#atis_quantity O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_airport#atis_flight_time#atis_ground_fare O O O B-state_name I-state_name O B-state_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O B-transport_type O O B-city_name
+atis_meal#atis_quantity O B-meal O O O B-airline_code B-flight_number O O O O B-toloc.city_name I-toloc.city_name O B-arrive_time.time I-arrive_time.time O O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_aircraft#atis_quantity O O O O O O O O B-fromloc.city_name O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_ground_service#atis_meal O O O O O O B-airport_name I-airport_name O O B-city_name O O B-meal O O O B-airline_name I-airline_name
+atis_ground_service O O O O O O O O B-city_name
+atis_abbreviation#atis_ground_fare O O O O B-fare_basis_code O O O O O O O O O O B-city_name
+atis_flight_no#atis_quantity O O O B-fromloc.city_name O B-toloc.city_name O B-airline_name O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_day_name#atis_flight_time#atis_meal O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O B-meal O O O B-airline_name O B-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_airfare#atis_day_name O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O
+atis_airline#atis_flight#atis_quantity O O O B-airline_code O O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_airport#atis_meal O O O B-state_name I-state_name O B-state_name O O O O B-meal O O O B-airline_code B-flight_number O O O O B-toloc.city_name I-toloc.city_name O B-arrive_time.time I-arrive_time.time
+atis_abbreviation O O B-airline_code O
+atis_ground_service O O O O O O O B-airport_name I-airport_name
+atis_abbreviation#atis_ground_service O O O O B-fare_basis_code O O O O O O O B-city_name
+atis_airfare#atis_airport O O O O O B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name B-depart_date.date_relative B-depart_date.day_name O O O O
+atis_aircraft#atis_ground_fare O O B-city_name I-city_name O O O O O O O O O B-airline_name I-airline_name O O O O O O B-transport_type O O B-city_name
+atis_airfare O O O B-cost_relative B-round_trip I-round_trip B-class_type O O B-airline_code O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name
+atis_day_name#atis_flight_time O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_airfare B-cost_relative O O B-fromloc.city_name O B-toloc.city_name O O B-depart_date.day_number I-depart_date.day_number O B-depart_date.month_name
+atis_abbreviation#atis_airline#atis_airport O O B-airport_code O O O O O O O O B-fromloc.city_name O B-toloc.city_name B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O O O B-airline_name I-airline_name
+atis_capacity#atis_day_name#atis_distance O O O O O B-aircraft_code O O O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O O O O O B-fromloc.airport_name I-fromloc.airport_name O O B-city_name
+atis_abbreviation#atis_capacity O O O O B-fare_basis_code O O O O O O O O B-airline_name B-aircraft_code
+atis_capacity#atis_flight_no O O O O O O O O O O B-aircraft_code O O O O O B-fromloc.city_name O B-toloc.city_name
+atis_distance#atis_flight_time O O O B-airport_name I-airport_name I-airport_name O O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_flight_no#atis_flight_time O O O B-fromloc.city_name O B-toloc.city_name O B-airline_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_airfare#atis_distance O O O B-cost_relative O O B-fromloc.city_name B-fromloc.state_code O B-toloc.city_name O O O O O O O O B-city_name I-city_name
+atis_airfare#atis_capacity O O O O O O O O B-airline_code O B-fromloc.city_name O B-toloc.city_name O O O O O O O O O O B-aircraft_code
+atis_distance#atis_flight O O O B-airport_name I-airport_name I-airport_name O O O O O O B-fromloc.city_name O B-toloc.city_name
+atis_airport#atis_ground_service#atis_meal O O O O O O O O O B-airport_name I-airport_name I-airport_name I-airport_name O O B-city_name O O B-meal O O O B-airline_code B-flight_number O O O O B-toloc.city_name I-toloc.city_name O B-arrive_time.time I-arrive_time.time
+atis_flight_no#atis_meal O O O B-fromloc.city_name O B-toloc.city_name O B-airline_name O O O B-meal O O O B-airline_name O B-flight_number I-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_abbreviation#atis_meal O O B-airline_code O O O O O B-meal O O O O B-flight_number O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O B-depart_date.day_name B-depart_time.period_of_day
+atis_airfare#atis_airline O O O O O B-fromloc.city_name B-fromloc.state_name O B-toloc.city_name O O O O O B-airline_code
+atis_abbreviation#atis_airport O O B-airport_code O O O B-state_name O
+atis_flight_time#atis_meal O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O B-meal_description O O B-airline_name I-airline_name
+atis_airfare#atis_airport O O O B-fromloc.city_name O B-toloc.city_name O O O B-state_name O
+atis_flight O O O B-fromloc.city_name B-fromloc.state_code O B-toloc.city_name
+atis_airport#atis_flight_no O O O O O O O B-fromloc.city_name O B-toloc.city_name
+atis_airfare#atis_city#atis_day_name O O O O O O B-class_type I-class_type O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-round_trip O O O O O O B-airline_name O O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O
+atis_airport O O O O O O O B-city_name I-city_name I-city_name O
+atis_city#atis_ground_fare#atis_meal O O O O O B-airline_name O O O O O O O O O O B-city_name O O O B-meal O O O B-airline_code B-flight_number O O O O B-toloc.city_name I-toloc.city_name O B-arrive_time.time I-arrive_time.time
+atis_ground_service#atis_meal O O O O O B-city_name O O B-meal O O O O B-flight_number O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O B-depart_date.day_name B-depart_time.period_of_day
+atis_airline#atis_flight O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O B-fromloc.city_name O B-toloc.city_name
+atis_flight_no#atis_flight_time O O O B-fromloc.city_name O B-toloc.city_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_day_name#atis_distance O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O O O B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O O B-city_name
+atis_aircraft#atis_ground_service O O O O O O O O O B-aircraft_code O O O O O O B-city_name
+atis_ground_fare O O O O B-transport_type O O B-airport_name I-airport_name
+atis_abbreviation#atis_day_name O O B-restriction_code I-restriction_code O O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O
+atis_day_name#atis_flight_no O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O B-fromloc.city_name O B-toloc.city_name O B-airline_name
+atis_airport O O
+atis_abbreviation#atis_day_name O O O O B-fare_basis_code O O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O
+atis_abbreviation#atis_day_name O O O B-aircraft_code O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O
+atis_aircraft#atis_airport O O O O O O B-aircraft_code O O O
+atis_abbreviation#atis_distance O O B-airport_code O O O O O O O O B-fromloc.airport_name I-fromloc.airport_name O O B-city_name
+atis_airport#atis_flight_time O O O O O O B-city_name I-city_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_capacity#atis_ground_service O O O O O O O B-aircraft_code O O O O O O O O B-airport_name I-airport_name O O B-city_name
+atis_aircraft#atis_city#atis_quantity O O O O B-aircraft_code O O O O O O B-fromloc.city_name O B-airline_name I-airline_name O B-class_type I-class_type O O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_distance O O O B-airport_name I-airport_name I-airport_name O O
+atis_capacity#atis_city#atis_day_name O O O O O O O O B-aircraft_code O O B-city_name O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O
+atis_flight_no#atis_ground_service O O O O O O O O O B-depart_date.day_name B-depart_time.time_relative B-depart_time.time I-depart_time.time O B-fromloc.city_name O O B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O O O O O O O O O O O B-city_name B-period_of_day B-period_of_day
+atis_city#atis_meal O B-city_name O O O B-meal_description O O B-airline_name I-airline_name
+atis_aircraft#atis_city#atis_flight_no O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O B-depart_time.time_relative B-depart_time.period_of_day O O B-city_name O O O O B-fromloc.city_name O B-toloc.city_name
+atis_airline#atis_flight_time#atis_ground_fare O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O O O O O O B-city_name
+atis_distance#atis_flight_no O O O O O O O B-city_name I-city_name O O O O O O O O O O B-fromloc.city_name O O O B-toloc.city_name
+atis_abbreviation#atis_aircraft O O B-airline_code O O O O O O O O B-aircraft_code O
+atis_airfare#atis_capacity#atis_ground_fare O O O B-class_type I-class_type B-round_trip I-round_trip O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O O O B-airline_name B-aircraft_code O O O O O O O B-transport_type O B-city_name
+atis_abbreviation#atis_airfare O O O B-aircraft_code O O O O B-cost_relative B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name
+atis_capacity#atis_meal O O O O O O B-airline_name B-aircraft_code O O B-meal O O O B-airline_name O B-flight_number I-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_airfare O O O B-fromloc.city_name B-fromloc.state_code O B-toloc.city_name
+atis_airport#atis_distance O O O B-city_name I-city_name O O O O B-airport_name I-airport_name I-airport_name O O
+atis_aircraft#atis_day_name O O O O O O O O B-fromloc.city_name O O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O
+atis_city#atis_day_name#atis_ground_service O O O B-airline_name O O O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O O O O O B-airport_name I-airport_name O O O O O O O O O O B-period_of_day
+atis_flight_time#atis_ground_fare O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O B-transport_type O O B-city_name
+atis_flight#atis_flight_no B-fromloc.city_name O B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day O O O O B-fromloc.city_name O B-toloc.city_name
+atis_aircraft#atis_quantity O O O O O O B-aircraft_code O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_airfare#atis_day_name O O O B-class_type O O B-fromloc.city_name O B-toloc.city_name O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O
+atis_capacity#atis_meal O O O O O O O O B-aircraft_code O O B-meal O O O B-airline_name I-airline_name
+atis_capacity#atis_day_name O O O O O O O B-aircraft_code O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O
+atis_aircraft#atis_day_name O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O B-depart_time.time_relative B-depart_time.period_of_day O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O
+atis_aircraft#atis_airport#atis_ground_fare O O O O O O O O B-airline_name O O O B-depart_time.time I-depart_time.time O O O O B-city_name I-city_name O O O O B-transport_type O O B-city_name I-city_name
+atis_airfare#atis_flight#atis_flight_no O O O B-cost_relative O O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O O O O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code B-depart_time.time_relative B-depart_time.time O O O O O B-fromloc.city_name O B-toloc.city_name O B-airline_name
+atis_city#atis_flight_time O O O B-airline_name O O O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_abbreviation#atis_capacity#atis_meal O O O O B-fare_basis_code O O O O O O O O O B-aircraft_code O O O B-meal O O O B-airline_name O B-flight_number I-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_ground_service O O O O O O O B-airport_name I-airport_name
+atis_distance O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O
+atis_flight B-fromloc.city_name I-fromloc.city_name I-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-depart_date.day_name
+atis_abbreviation#atis_day_name O O B-airport_code O O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O
+atis_aircraft#atis_flight_no O O O O B-aircraft_code O O O O O O B-fromloc.city_name O B-toloc.city_name
+atis_airline#atis_airport O O O B-airline_code O O O O O B-city_name
+atis_distance#atis_flight_no#atis_ground_fare O O O B-airport_name I-airport_name I-airport_name O O O O O O O O O O O O B-fromloc.city_name O O O B-toloc.city_name O O O O O O O B-transport_type O B-city_name
+atis_distance#atis_ground_fare O O O O O O B-fromloc.airport_name I-fromloc.airport_name O O B-city_name O O O O O O O O O O B-city_name
+atis_ground_fare#atis_meal O O O O B-transport_type O O B-city_name O O B-meal O O O B-airline_name O B-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_city#atis_ground_service O O O O O B-airline_name O O O O O O O O O B-airport_name I-airport_name
+atis_aircraft#atis_capacity#atis_flight O O O O O O O O O B-aircraft_code O O O O O O O O B-aircraft_code O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_airline#atis_day_name O O O O O B-fromloc.city_name O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O
+atis_flight_no#atis_meal O O O B-fromloc.city_name O B-toloc.city_name O O O B-meal O O O B-airline_code B-flight_number O O O O B-toloc.city_name I-toloc.city_name O B-arrive_time.time I-arrive_time.time
+atis_city#atis_flight O B-city_name O O O O O O O B-depart_date.day_name B-depart_time.period_of_day O B-fromloc.city_name O B-toloc.city_name
+atis_airfare#atis_flight_time O B-depart_date.day_name O O B-fromloc.city_name O B-toloc.city_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_airport#atis_ground_service O O O B-city_name O O B-airport_name I-airport_name O O O O O O O O O
+atis_flight_no O O O B-fromloc.city_name O B-toloc.city_name
+atis_aircraft#atis_city O O B-city_name I-city_name O O O O O O O O O B-airline_name I-airline_name O O O O O B-airline_name O O
+atis_abbreviation#atis_capacity O O O O B-fare_basis_code O O O O O O O O O O O B-aircraft_code
+atis_capacity#atis_distance O O O O O O O B-aircraft_code O O O O O O O O B-fromloc.airport_name I-fromloc.airport_name O O B-city_name
+atis_airfare#atis_day_name#atis_ground_service O O O O O O B-round_trip I-round_trip B-class_type I-class_type O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O O O B-airport_code O B-city_name I-city_name I-city_name
+atis_flight#atis_ground_fare O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O O O O B-city_name
+atis_day_name#atis_ground_fare O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O O O O O O O B-city_name
+atis_ground_service#atis_meal O O O B-city_name I-city_name O O O B-meal O O O B-airline_name O B-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_abbreviation#atis_airfare#atis_capacity O O O O B-restriction_code O O O O O B-class_type O O B-fromloc.city_name O B-toloc.city_name O O O O O O O O B-aircraft_code
+atis_airline#atis_ground_service O O O O B-fromloc.city_name B-fromloc.state_code O B-toloc.city_name B-toloc.state_name O O O O O O O O B-airport_name I-airport_name O O O O O O O O O O B-period_of_day
+atis_abbreviation#atis_city O O B-airport_code O O O B-city_name
+atis_airline#atis_ground_service O O O O O O O B-fromloc.city_name O B-toloc.city_name O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O O O B-city_name O B-day_name B-period_of_day
+atis_distance#atis_flight_no#atis_ground_fare O O O O O O B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O B-toloc.city_name I-toloc.city_name O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O B-transport_type O O B-airport_name I-airport_name
+atis_airport#atis_city#atis_flight_time O O O O O O O O O B-city_name I-city_name O O O O O O B-airline_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_capacity#atis_ground_fare O O O O O O O B-aircraft_code O O O O O O B-transport_type O O B-airport_name I-airport_name
+atis_airfare#atis_airport O O O B-cost_relative B-round_trip I-round_trip O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name B-depart_date.day_number I-depart_date.day_number B-depart_date.year O O O O O B-mod O B-city_name B-state_name
+atis_airline#atis_quantity O O O B-airline_code O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_capacity#atis_distance O O O O O O O B-aircraft_code O O O O O O O O O B-city_name I-city_name
+atis_airport#atis_city#atis_quantity O B-state_name B-state_name B-state_name O O O O O O O B-airline_name O O O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_flight O O O O B-toloc.city_name O O O O O O O B-fromloc.city_name I-fromloc.city_name
+atis_city#atis_quantity O B-city_name O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_flight_no O O O B-airline_name I-airline_name O B-fromloc.city_name O B-toloc.city_name
+atis_abbreviation#atis_city O O O B-aircraft_code O O O O B-airline_name O O O
+atis_airline#atis_distance#atis_flight_no O O O O B-toloc.city_name O O O O O O O B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O O B-city_name O O O O O B-fromloc.city_name O B-toloc.city_name O B-airline_name
+atis_airfare#atis_ground_fare O O B-depart_date.day_name O O B-fromloc.city_name O B-toloc.city_name O O O O O O B-transport_type O O B-airport_name I-airport_name
+atis_abbreviation O O O B-restriction_code I-restriction_code
+atis_aircraft#atis_flight_no#atis_meal O O O O O O O O B-fromloc.city_name O O O O B-fromloc.city_name O B-toloc.city_name O O B-meal_description O O B-airline_name I-airline_name
+atis_capacity O O O O O O B-airline_name B-aircraft_code
+atis_airline#atis_airport O O O O B-fromloc.city_name B-fromloc.state_code O B-toloc.city_name B-toloc.state_name O O O B-state_name B-state_name B-state_name O
+atis_aircraft#atis_day_name O O O O B-aircraft_code O O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O
+atis_aircraft#atis_airfare#atis_quantity O O O O B-aircraft_code O O O O O B-cost_relative B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name O O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_airfare#atis_distance O O O B-class_type O O B-fromloc.city_name O B-toloc.city_name O O O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O
+atis_capacity O O O O O O B-aircraft_code
+atis_aircraft#atis_airfare O O O O O O O O O B-aircraft_code O O O O B-cost_relative B-round_trip I-round_trip O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name B-depart_date.day_number I-depart_date.day_number B-depart_date.year
+atis_city#atis_flight#atis_ground_fare O O O B-airline_name O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O O O O O B-city_name
+atis_aircraft#atis_flight_time O O O O O O O O B-fromloc.city_name O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_airfare#atis_capacity O O O O O B-fromloc.city_name O B-toloc.city_name B-cost_relative B-fare_amount I-fare_amount O O O O O O O O O B-aircraft_code
+atis_capacity#atis_flight O O O O O O O B-aircraft_code O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name
+atis_city#atis_distance#atis_ground_fare O O O B-airline_name O O O O O O O B-airport_name I-airport_name O O O O O O O O O O O O B-city_name
+atis_flight O O O O B-airline_name I-airline_name O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_distance#atis_ground_service O O O B-airport_name I-airport_name I-airport_name O O O O O O B-city_name I-city_name
+atis_abbreviation#atis_ground_fare O O B-airline_code O O O O B-transport_type O O O B-city_name I-city_name I-city_name
+atis_abbreviation#atis_aircraft#atis_flight O O O O B-fare_basis_code O O O O O O O O O O B-airline_name O O O B-depart_time.time I-depart_time.time O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name I-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day
+atis_capacity#atis_flight_no O O O O O O O B-aircraft_code O O O O O B-fromloc.city_name O B-toloc.city_name O B-airline_name
+atis_airline#atis_capacity O O O O O B-fromloc.city_name O O O O O O O O O O O B-aircraft_code
+atis_airport#atis_meal O O O B-city_name O O O B-meal_description O O B-airline_name I-airline_name
+atis_abbreviation#atis_airline O O O O B-fare_basis_code O O O O O O B-airline_code
+atis_city#atis_flight_no#atis_flight_time O O O O O B-airline_name O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_flight_no O O O B-fromloc.city_name O B-toloc.city_name
+atis_aircraft#atis_airfare#atis_meal O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O B-depart_time.time_relative B-depart_time.period_of_day O O B-depart_date.day_name O O B-fromloc.city_name O B-toloc.city_name O O O B-meal O O O O B-flight_number O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O B-depart_date.day_name B-depart_time.period_of_day
+atis_airfare O O O O O B-fromloc.city_name B-fromloc.state_name O B-toloc.city_name
+atis_city#atis_ground_service#atis_quantity O O O O O B-airline_name O O O O O O O B-airport_code O B-city_name I-city_name I-city_name O O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_abbreviation#atis_meal O O B-fare_basis_code O O O O B-meal O O O B-airline_name O B-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_flight#atis_ground_service O O B-fromloc.city_name O B-toloc.city_name O O O O O O B-city_name
+atis_ground_fare O O O O B-transport_type O O B-city_name
+atis_aircraft#atis_city O O O O B-aircraft_code O O O O O O O B-airline_name O
+atis_abbreviation#atis_airline#atis_airport O O O O B-fare_basis_code O O O O O O O O O B-fromloc.city_name O B-toloc.city_name B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O B-state_name O
+atis_flight#atis_ground_service O O O O O B-fromloc.city_name O O O O O B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O O O O O O O B-airport_name I-airport_name O O B-city_name
+atis_aircraft#atis_airfare#atis_airport O O O O B-aircraft_code O O O O O B-cost_relative B-round_trip I-round_trip O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O B-state_name I-state_name O B-state_name O
+atis_day_name#atis_quantity O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_aircraft O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O B-depart_time.time_relative B-depart_time.period_of_day
+atis_abbreviation O O O B-aircraft_code
+atis_ground_service O O O O O O B-airport_name I-airport_name O O O O O O O O O O B-period_of_day
+atis_aircraft#atis_day_name#atis_distance O O O O O O O O B-airline_name O O O B-depart_time.time I-depart_time.time O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O O O O B-city_name I-city_name
+atis_flight_time#atis_quantity O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_aircraft#atis_ground_fare O O O O O O B-aircraft_code O O O O O O B-transport_type O O B-city_name
+atis_airfare#atis_airport O O B-cost_relative O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O B-city_name I-city_name
+atis_airfare O O O B-class_type O O B-fromloc.city_name O B-toloc.city_name
+atis_flight#atis_quantity O O O O O B-round_trip I-round_trip O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_airfare#atis_day_name#atis_meal O O B-cost_relative O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O B-meal O O O B-airline_name O B-flight_number I-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_abbreviation#atis_capacity#atis_flight_time O O B-airline_code O O O O O O O O O O B-aircraft_code O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_flight#atis_quantity O O B-depart_date.day_name B-depart_time.period_of_day O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_flight O O B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name
+atis_distance#atis_flight_no O O O B-airport_name I-airport_name I-airport_name O O O O O O B-fromloc.city_name O B-toloc.city_name
+atis_airport#atis_city O O O B-state_name I-state_name O B-state_name O O O O O O O B-fromloc.city_name O B-airline_name I-airline_name O B-class_type I-class_type
+atis_airline#atis_meal O O O O B-fromloc.airport_name I-fromloc.airport_name O B-depart_time.start_time O B-depart_time.end_time I-depart_time.end_time O B-depart_date.month_name B-depart_date.day_number O O B-meal_description O O B-airline_name I-airline_name
+atis_capacity#atis_flight_time O O O O O O O B-aircraft_code O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_ground_service#atis_meal O O O O B-city_name O O O B-meal_description O O B-airline_name I-airline_name
+atis_capacity#atis_flight O O O O O O O B-aircraft_code O O O O O B-flight_mod O O B-fromloc.city_name O B-toloc.city_name O O B-meal_description
+atis_airline#atis_flight O O O B-airline_code O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O B-depart_time.period_of_day O O O O B-arrive_time.time_relative B-arrive_time.time I-arrive_time.time O O O O O O B-flight_stop O
+atis_city#atis_meal O O O O O B-airline_name O O O O B-meal O O O B-airline_code B-flight_number O O O O B-toloc.city_name I-toloc.city_name O B-arrive_time.time I-arrive_time.time
+atis_airport#atis_quantity O O O B-city_name O O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_flight#atis_flight_no#atis_quantity O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O O O O O O O O B-depart_date.day_name B-depart_time.time_relative B-depart_time.time I-depart_time.time O B-fromloc.city_name O O B-toloc.city_name I-toloc.city_name I-toloc.city_name O O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_aircraft#atis_flight_time O O O O O O O O B-fromloc.city_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_capacity#atis_meal O O O O O O O B-aircraft_code O O B-meal O O O B-airline_code B-flight_number O O O O B-toloc.city_name I-toloc.city_name O B-arrive_time.time I-arrive_time.time
+atis_city#atis_flight O O O B-airline_name O O O O O B-fromloc.city_name O B-toloc.city_name B-depart_time.time_relative B-depart_time.period_of_day
+atis_airline#atis_distance O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O
+atis_aircraft#atis_ground_service#atis_meal O O O O O O O O B-fromloc.city_name O O O O O B-city_name O O O B-meal O O O B-airline_name O B-flight_number I-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_aircraft#atis_ground_fare O O B-city_name I-city_name O O O O O O O O O B-airline_name I-airline_name O O O O O O O B-transport_type O B-city_name
+atis_airline O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_day_name#atis_distance O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O O O O B-fromloc.airport_name I-fromloc.airport_name O O B-city_name
+atis_city#atis_distance O O O B-airline_name O O O O O O O B-airport_name I-airport_name O O
+atis_abbreviation#atis_airfare O O B-fare_basis_code O O O B-depart_date.day_name O O B-fromloc.city_name O B-toloc.city_name
+atis_flight#atis_ground_fare O O O O O B-fromloc.city_name O B-toloc.city_name B-depart_date.day_name B-depart_time.period_of_day O O B-meal O O O O O B-transport_type O O B-airport_name I-airport_name
+atis_ground_fare#atis_ground_service O O O B-transport_type O O B-city_name I-city_name O O O O O O B-transport_type O B-city_name
+atis_abbreviation O O B-fare_basis_code O
+atis_airport#atis_flight_no O B-state_name O O O O O B-fromloc.city_name O B-toloc.city_name O B-airline_name
+atis_aircraft#atis_capacity O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O B-depart_time.time_relative B-depart_time.period_of_day O O O O O O O O B-aircraft_code
+atis_day_name#atis_flight_time O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_abbreviation#atis_airfare O O O O O B-booking_class O O B-cost_relative O B-round_trip I-round_trip O B-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name B-depart_date.day_number I-depart_date.day_number
+atis_day_name#atis_flight O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name O B-arrive_time.time_relative B-arrive_time.time I-arrive_time.time
+atis_capacity#atis_city#atis_quantity O O O O O O B-aircraft_code O O O O O O B-airline_name O O O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_aircraft#atis_distance O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O B-depart_time.time_relative B-depart_time.period_of_day O O O O O O O O B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O O B-city_name
+atis_aircraft#atis_flight_time#atis_meal O O B-city_name I-city_name O O O O O O O O O B-airline_name I-airline_name O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O B-meal O O O B-airline_name O B-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_airport#atis_meal#atis_quantity O O O O O O B-city_name I-city_name O O B-meal O O O B-airline_name O B-flight_number O B-fromloc.city_name O B-toloc.city_name O O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_airfare#atis_airport#atis_quantity O O O B-cost_relative B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name O O O O B-city_name O O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_flight_no#atis_flight_time O O O B-fromloc.city_name O B-toloc.city_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_capacity#atis_distance#atis_ground_service O O O O O O O O B-aircraft_code O O O O B-city_name I-city_name B-airport_name I-airport_name O O O O O O O O O B-city_name
+atis_aircraft#atis_capacity#atis_meal O O O O B-aircraft_code O O O O O O O O O B-aircraft_code O O O B-meal O O O B-airline_name O B-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_abbreviation#atis_ground_service O O O B-restriction_code I-restriction_code O O O O B-city_name I-city_name
+atis_airport#atis_city O O O B-city_name O O B-city_name
+atis_aircraft#atis_distance O O O O O O O O O B-aircraft_code O O O O O B-airport_name I-airport_name O O
+atis_airport#atis_capacity#atis_city O B-state_name O O O O O O O O O B-aircraft_code O O O O O O O B-airline_name O
+atis_flight_no#atis_flight_time#atis_ground_fare O O O O O O O O O B-fromloc.city_name O O O B-toloc.city_name O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O B-transport_type O O B-airport_name I-airport_name
+atis_airfare#atis_ground_fare O B-class_type B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O O B-transport_type O O B-airport_name I-airport_name
+atis_city#atis_distance O B-city_name O O O O B-city_name I-city_name B-airport_name I-airport_name O O
+atis_abbreviation#atis_airport O O B-restriction_code I-restriction_code O O O O O O B-city_name
+atis_airline#atis_distance O O O B-airline_code O O O O O B-city_name I-city_name B-airport_name I-airport_name O O
+atis_distance#atis_flight_time#atis_quantity O O O O O O O B-city_name I-city_name O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_airfare#atis_city#atis_flight_time O O O O O O B-class_type I-class_type O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-round_trip O O B-city_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_airline#atis_day_name#atis_meal O O O B-airline_code O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O B-meal O O O B-airline_code B-flight_number O O O O B-toloc.city_name I-toloc.city_name O B-arrive_time.time I-arrive_time.time
+atis_flight_time#atis_ground_fare O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O O B-transport_type O O B-airport_name I-airport_name
+atis_day_name#atis_meal O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O B-meal O O O B-airline_name O B-flight_number I-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_airfare#atis_quantity O O O O O B-fromloc.city_name O B-toloc.city_name B-depart_date.date_relative B-depart_date.day_name O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_airfare#atis_quantity O O O B-cost_relative I-cost_relative B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_capacity#atis_distance#atis_ground_service O O O O O O O B-aircraft_code O O O O B-airport_name I-airport_name I-airport_name O O O O O O O O O B-transport_type O B-city_name B-state_code
+atis_aircraft#atis_ground_service O O O O B-aircraft_code O O O O O O O B-transport_type O B-city_name
+atis_airport O O O B-mod O B-city_name B-state_name
+atis_flight#atis_flight_time O O O O B-toloc.city_name O B-fromloc.city_name I-fromloc.city_name O B-arrive_date.day_name O O B-arrive_time.period_of_day O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_airfare#atis_airport#atis_capacity O B-depart_date.day_name O O B-fromloc.city_name O B-toloc.city_name O O O O B-city_name I-city_name O O O O O O O O O B-aircraft_code
+atis_day_name#atis_ground_service O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O O O O O O B-city_name
+atis_abbreviation#atis_airfare#atis_flight_no O O O B-airline_code O O O O O O B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name B-depart_time.period_of_day B-or B-depart_date.day_name B-depart_time.period_of_day O O O O B-fromloc.city_name O B-toloc.city_name
+atis_abbreviation#atis_meal O O O B-airline_code O O O O O B-meal O O O B-airline_name I-airline_name
+atis_day_name#atis_flight O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name
+atis_flight_no#atis_meal O O O B-airline_name I-airline_name O B-fromloc.city_name O B-toloc.city_name O O O B-meal O O O B-airline_name O B-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_capacity#atis_flight O O O O O O O B-aircraft_code O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name
+atis_airline#atis_airport O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O B-state_name O
+atis_airfare#atis_distance#atis_quantity O O O B-fromloc.city_name B-fromloc.state_code O B-toloc.city_name O O O O O O O O B-city_name I-city_name O O O B-airline_name I-airline_name O O O B-aircraft_code
+atis_distance#atis_ground_service O O O O O O B-fromloc.airport_name I-fromloc.airport_name O O B-city_name O O O O O O O B-airport_name I-airport_name O O B-city_name
+atis_flight O B-airline_name I-airline_name O O B-depart_date.month_name B-depart_date.day_number O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name
+atis_abbreviation#atis_flight#atis_flight_time O O O O B-fare_basis_code O O O O O B-depart_date.day_name B-depart_time.period_of_day O O B-airline_name O O B-meal O B-fromloc.city_name O B-toloc.city_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_ground_fare#atis_meal O O O B-transport_type O O B-city_name I-city_name O O O B-meal O O O O B-flight_number O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O B-depart_date.day_name B-depart_time.period_of_day
+atis_airport#atis_ground_service O B-state_name O O O O O B-transport_type I-transport_type O O B-airport_name I-airport_name
+atis_abbreviation#atis_airport O O O O B-meal_code O O O O O B-city_name I-city_name
+atis_flight_time#atis_ground_fare#atis_meal O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O O B-transport_type O B-city_name O O O B-meal O O O B-airline_code B-flight_number O O O O B-toloc.city_name I-toloc.city_name O B-arrive_time.time I-arrive_time.time
+atis_abbreviation#atis_distance#atis_ground_service O O O B-aircraft_code O O O O O O O B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O O B-city_name O O O O B-city_name I-city_name
+atis_city#atis_ground_fare O O O B-airline_name O O O O O O O O O O O O O B-city_name
+atis_city#atis_meal O O O B-airline_name O O O O B-meal_description O O B-airline_name I-airline_name
+atis_flight#atis_flight_time O O B-airline_name O O B-fromloc.city_name I-fromloc.city_name O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_ground_fare#atis_meal O O O O O B-transport_type O B-city_name O O O B-meal O O O B-airline_name O B-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_city#atis_distance O O O B-airline_name O O O O O O B-airport_name I-airport_name I-airport_name O O
+atis_abbreviation#atis_city#atis_distance O O B-airline_code O O O O O O B-fromloc.city_name O B-airline_name I-airline_name O B-class_type I-class_type O O O O O O O B-fromloc.city_name I-fromloc.city_name B-fromloc.airport_name I-fromloc.airport_name I-fromloc.airport_name O O B-city_name I-city_name I-city_name
+atis_abbreviation#atis_flight_no#atis_flight_time O O B-mod B-days_code O O O O O B-fromloc.city_name O B-toloc.city_name O B-airline_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_airfare#atis_capacity#atis_city O O O O O O O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O O O O O O O O B-aircraft_code O O O O O B-airline_name O O
+atis_abbreviation#atis_aircraft O O B-airport_code O O O O O O O O O O B-airline_name O O O B-depart_time.time I-depart_time.time
+atis_aircraft#atis_airline#atis_ground_service O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O B-depart_time.time_relative B-depart_time.period_of_day O O O O O O O O O B-city_name O O O O O O O O B-airport_name I-airport_name I-airport_name I-airport_name O O B-city_name
+atis_flight_no#atis_ground_fare O O O B-fromloc.city_name O B-toloc.city_name O O O O O B-transport_type O O B-airport_name I-airport_name
+atis_city#atis_quantity O O O B-airline_name O O O O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_airfare#atis_meal O O O B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name O B-depart_date.day_name B-depart_time.period_of_day B-or B-depart_date.day_name B-depart_time.period_of_day O O B-meal O O O O B-flight_number O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O B-depart_date.day_name B-depart_time.period_of_day
+atis_airport#atis_meal O B-state_name B-state_name B-state_name O O O O B-meal O O O B-airline_name O B-flight_number I-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_city#atis_flight O O O B-airline_name O O O O O O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-depart_date.month_name B-depart_date.day_number
+atis_aircraft#atis_airline O O O O O O O B-fromloc.city_name O B-toloc.city_name B-depart_time.time_relative B-depart_time.period_of_day O O O O O B-airline_code
+atis_airport#atis_flight_no O O O B-city_name O O O O O B-fromloc.city_name O B-toloc.city_name O B-airline_name
+atis_airport#atis_quantity O O O O O O O B-city_name I-city_name I-city_name O O O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_aircraft#atis_ground_fare O O O O O O O O B-fromloc.city_name O O O O B-transport_type O O B-city_name I-city_name
+atis_day_name#atis_meal O O O O O O O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O B-meal O O O B-airline_code B-flight_number O O O O B-toloc.city_name I-toloc.city_name O B-arrive_time.time I-arrive_time.time
+atis_flight#atis_ground_fare#atis_ground_service O O O O B-fromloc.city_name O B-toloc.city_name O O O O B-transport_type O O B-city_name I-city_name O O O O O O O O O O O O B-city_name B-period_of_day B-period_of_day
+atis_city#atis_flight#atis_flight_time O O O B-airline_name O O O O O O O B-depart_time.period_of_day B-depart_time.period_of_day O B-depart_date.today_relative O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_distance#atis_quantity O O O O O O B-fromloc.airport_name I-fromloc.airport_name O O B-city_name O O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_flight_time#atis_quantity O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_airline#atis_distance O O O O O O O B-fromloc.city_name O B-toloc.city_name B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O O B-city_name I-city_name B-airport_name I-airport_name O O
+atis_capacity#atis_ground_service O O O O O O O B-aircraft_code O O O O O O O B-airport_name I-airport_name O O B-city_name
+atis_distance#atis_quantity O O O B-airport_name I-airport_name I-airport_name O O O O O B-airline_name I-airline_name I-airline_name O O B-aircraft_code
+atis_aircraft#atis_meal O O O O O O O O O B-aircraft_code O O O B-meal_description O O B-airline_name I-airline_name
+atis_flight_no#atis_quantity O O O B-airline_name I-airline_name O B-fromloc.city_name O B-toloc.city_name O O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_aircraft#atis_airline#atis_city O O B-city_name I-city_name O O O O O O O O O B-airline_name I-airline_name O O O O B-airline_code O O O O O B-airline_name O O
+atis_airline#atis_city#atis_distance O O O O B-toloc.city_name O O O O B-airline_name O O O O O O O B-city_name I-city_name B-airport_name I-airport_name O O
+atis_airfare O O O B-cost_relative B-round_trip I-round_trip O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name B-depart_date.day_number I-depart_date.day_number B-depart_date.year
+atis_airport#atis_flight_time O O O O O O B-flight_time I-flight_time O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name
+atis_aircraft#atis_meal O O B-city_name I-city_name O O O O O O O O O B-airline_name I-airline_name O O B-meal O O O B-airline_name O B-flight_number O B-fromloc.city_name O B-toloc.city_name
+atis_abbreviation#atis_city O O B-airport_code O O B-city_name
+atis_abbreviation#atis_day_name O O O O B-fare_basis_code O O O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O O
+atis_airport#atis_distance O O O O O O B-airline_name I-airline_name O O O O O O O O O B-city_name I-city_name
+atis_abbreviation#atis_flight O O B-airport_code O O B-depart_date.date_relative B-depart_date.day_name O O O O O B-fromloc.city_name I-fromloc.city_name O O O O B-toloc.city_name O O O B-toloc.city_name B-arrive_time.time_relative B-arrive_time.time I-arrive_time.time
+atis_airfare#atis_distance O O O B-cost_relative B-round_trip I-round_trip O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O B-depart_date.month_name B-depart_date.day_number I-depart_date.day_number B-depart_date.year O O O O O B-airport_name I-airport_name I-airport_name O O
+atis_airline#atis_quantity O O O B-airline_code O O O B-airline_name I-airline_name I-airline_name O O O B-aircraft_code
+atis_aircraft#atis_airline#atis_meal O O O O B-aircraft_code O O O O O O O O O B-fromloc.city_name O B-toloc.city_name O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O B-fromloc.city_name I-fromloc.city_name O B-toloc.city_name O O O B-meal O O O O B-flight_number O B-fromloc.city_name O B-toloc.city_name B-toloc.state_code O B-depart_date.day_name B-depart_time.period_of_day
+atis_abbreviation#atis_flight_no O O B-restriction_code I-restriction_code O O O O O O B-airline_name I-airline_name O B-fromloc.city_name O B-toloc.city_name
+atis_flight_no#atis_meal O O O B-fromloc.city_name O B-toloc.city_name O O O B-meal_description O O B-airline_name I-airline_name
+atis_abbreviation#atis_ground_fare O O O B-aircraft_code O O O O O O B-transport_type O O B-airport_name I-airport_name
+atis_airfare#atis_airline O O O O O O B-class_type I-class_type O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O B-round_trip O O O O O B-airline_code
+atis_airfare#atis_capacity#atis_ground_service O B-class_type B-round_trip I-round_trip O O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O O O O O O B-airline_name B-aircraft_code O O O O O O B-airport_code O B-city_name I-city_name I-city_name
+atis_aircraft#atis_flight_no O O O O O O O O B-fromloc.city_name O O O O B-fromloc.city_name O B-toloc.city_name O B-airline_name

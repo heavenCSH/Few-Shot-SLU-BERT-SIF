@@ -1,0 +1,40 @@
+O=-=not an named entity
+facility=-=facility
+restaurant_name=-=restaurant name
+best_rating=-=best rating
+music_item=-=music item
+playlist_owner=-=playlist owner
+object_part_of_series_type=-=object part of series type
+object_type=-=object type
+condition_description=-=condition description
+movie_name=-=movie name
+spatial_relation=-=spatial relation
+sort=-=sort
+object_name=-=object name
+artist=-=artist
+cuisine=-=cuisine
+timeRange=-=timeRange
+object_select=-=object select
+movie_type=-=movie type
+geographic_poi=-=geographic poi
+state=-=state
+served_dish=-=served dish
+current_location=-=current location
+album=-=album
+country=-=country
+location_name=-=location name
+poi=-=poi
+condition_temperature=-=condition temperature
+party_size_description=-=party size description
+party_size_number=-=party size number
+entity_name=-=entity name
+track=-=track
+year=-=year
+rating_value=-=rating value
+restaurant_type=-=restaurant type
+genre=-=genre
+playlist=-=playlist
+service=-=service
+city=-=city
+object_location_type=-=object location type
+rating_unit=-=rating unit
